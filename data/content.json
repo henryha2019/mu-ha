@@ -117,45 +117,108 @@
   ],
   "projects": [
     {
-      "title": "Brilliant Automation",
-      "tagline": "Interpretable ML for industrial equipment health monitoring.",
+      "title": "Machine Health Prediction & Monitoring Dashboard",
+      "tagline": "Predictive maintenance system for industrial equipment using interpretable ML.",
       "image": "assets/img/projects/brilliant-automation.png",
       "links": [
-        { "label": "Case Study", "url": "#projects" },
         { "label": "GitHub", "url": "https://github.com/your-handle/brilliant-automation" }
       ],
       "bullets": [
-        "Sensor ingestion + DSP feature extraction + model training and evaluation.",
-        "Dash monitoring dashboard for health scoring, trends, and operational alerts.",
-        "Built with production mindset: reproducibility, clear interfaces, and deployment-ready structure."
+        "Developed an end-to-end predictive maintenance system using real-world industrial sensor data.",
+        "Built and evaluated multiple machine learning models (Ridge, Random Forest, LSTM), balancing accuracy with interpretability for operational use.",
+        "Performed feature engineering and time-series modeling to forecast equipment health and potential failures.",
+        "Designed and implemented an interactive Dash dashboard to visualize real-time health scores, historical trends, and maintenance alerts.",
+        "Structured the system with deployment-readiness, reproducibility, and monitoring in mind."
       ]
     },
     {
-      "title": "JobAI",
-      "tagline": "AI job application assistant (profile/resume parsing + workflows).",
+      "title": "AI Wall Painting Robot – Wall Segmentation",
+      "tagline": "Deep learning-based wall surface segmentation for robotic painting automation.",
       "image": "assets/img/projects/jobai.png",
-      "links": [
-        { "label": "Demo", "url": "#projects" },
-        { "label": "GitHub", "url": "https://github.com/your-handle/jobai" }
-      ],
+      "links": [],
       "bullets": [
-        "FastAPI backend for structured profile/resume parsing and automation workflows.",
-        "Designed to evolve into a product: credits, integrations, and scalable deployment."
+        "Implemented a Pyramid Scene Parsing Network (PSPNet) for industrial wall segmentation.",
+        "Designed an encoder–decoder architecture with a PPM-based decoder for pixel-wise classification.",
+        "Evaluated multiple training strategies including transfer learning and end-to-end training.",
+        "Achieved 92.13% accuracy and 72.58% IoU, enabling reliable automated wall-surface detection.",
+        "Preprocessed data by flattening irregular wall segments, resizing images, and applying data augmentation."
       ]
     },
     {
-      "title": "MLOps Foundations (Hands-on)",
-      "tagline": "Applied learning: Docker, Kubernetes, Linux, CI/CD, Terraform, AWS.",
+      "title": "UWAFT Controls – Autonomous Vehicle Control System",
+      "tagline": "Control algorithms and sensor fusion for an autonomous vehicle simulation.",
+      "image": "assets/img/projects/brilliant-automation.png",
+      "links": [],
+      "bullets": [
+        "Designed and implemented vehicle control algorithms from scratch in Python and MATLAB.",
+        "Derived kinematic and dynamic models to support motion planning and control.",
+        "Designed and tuned control parameters for stability and responsiveness.",
+        "Implemented an Extended Kalman Filter (EKF) for multi-sensor fusion to improve state estimation accuracy."
+      ]
+    },
+    {
+      "title": "Robotic Manipulator & Pick-and-Place System",
+      "tagline": "Control, mechanical design, and hardware-in-the-loop validation of a robotic arm.",
+      "image": "assets/img/projects/brilliant-automation.png",
+      "links": [],
+      "bullets": [
+        "Designed and implemented a control system for a robotic arm and pick-and-place manipulator.",
+        "Addressed nonlinearities and coupling effects through controller design and trajectory optimization.",
+        "Developed manual and automated control modes for efficient and repeatable motion.",
+        "Designed and fabricated GD&T-compliant mechanical components and integrated sensors and actuators via Arduino.",
+        "Performed system identification, parameter tuning, hardware-in-the-loop testing, and root cause analysis."
+      ]
+    },
+    {
+      "title": "Time Series Forecasting for TSLA Stock Prices",
+      "tagline": "Deep learning-based financial time series forecasting using attention models.",
+      "image": "assets/img/projects/jobai.png",
+      "links": [],
+      "bullets": [
+        "Implemented a Temporal Fusion Transformer to model and forecast Tesla (TSLA) stock prices.",
+        "Performed hyperparameter tuning across input window size, attention dropout, and learning rate schedules.",
+        "Evaluated model performance using MSE, RMSE, R², and explained variance.",
+        "Demonstrated applied use of sequence models on real-world financial data."
+      ]
+    },
+    {
+      "title": "ML Guard (In Progress)",
+      "tagline": "Lightweight MLOps monitoring and cloud cost guard for small ML teams.",
       "image": "assets/img/projects/brilliant-automation.png",
       "links": [
-        { "label": "Roadmap", "url": "#skills" }
+        { "label": "GitHub (WIP)", "url": "https://github.com/your-handle/ml-guard" }
       ],
       "bullets": [
-        "Docker Mastery Crash Course + Kubernetes fundamentals applied to containerized services.",
-        "Linux Full Course: operational fluency (shell, permissions, system basics).",
-        "GitHub Actions Tutorial: CI checks, automated builds, and deployment workflows.",
-        "Terraform courses: Infrastructure as Code patterns for repeatable environments.",
-        "AWS Cloud Technical Essentials + MLOps Specialization (C1): modern MLOps lifecycle patterns."
+        "Designing a minimal MLOps service to monitor model health, data drift, inference latency, and cloud costs.",
+        "Focused on production signals such as feature statistics, prediction distributions, and operational alerts.",
+        "Integrating AWS Cost Explorer to attribute cloud spend at the model or service level.",
+        "Built with a deliberate MVP scope to avoid over-engineering while preserving production realism."
+      ]
+    },
+    {
+      "title": "JobAI – AI Job Application Assistant (In Progress)",
+      "tagline": "Backend-first AI system for resume parsing and automated job application workflows.",
+      "image": "assets/img/projects/jobai.png",
+      "links": [
+        { "label": "GitHub (WIP)", "url": "https://github.com/your-handle/jobai" }
+      ],
+      "bullets": [
+        "Developing a FastAPI-based backend for structured resume and profile parsing.",
+        "Designing APIs to support automated job application workflows and downstream integrations.",
+        "Emphasizing clean interfaces, extensibility, and production-ready architecture.",
+        "Positioned for future features such as credit systems, automation pipelines, and scalable deployment."
+      ]
+    },
+    {
+      "title": "Machine Learning & Software Foundations",
+      "tagline": "Broad ML, deep learning, and software engineering experience across languages.",
+      "image": "assets/img/projects/brilliant-automation.png",
+      "links": [],
+      "bullets": [
+        "Hands-on experience with CNNs, RNNs, sequence models, regularization, hyperparameter tuning, and reinforcement learning.",
+        "Implemented systems for object detection, face verification, art style transfer, sentiment analysis, machine translation, and voice detection.",
+        "Developed a robotic system capable of recognizing and cleaning goose feces using computer vision.",
+        "Strong foundation in data structures and algorithms implemented in Python, MATLAB, C++, and C."
       ]
     }
   ]
