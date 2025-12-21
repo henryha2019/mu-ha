@@ -116,7 +116,7 @@ img { max-width: 100%; display: block; }
 .mobile-nav .nav-link { display: block; }
 
 /* Hero */
-.hero { padding-top: 46px; padding-bottom: 140px; }
+.hero { padding-top: 46px; padding-bottom: 180px; }
 .hero-grid {
   display: grid;
   grid-template-columns: 360px 1fr;

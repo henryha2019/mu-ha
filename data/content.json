@@ -8,7 +8,7 @@
     "github": "https://github.com/henryha2019"
   },
   "home": {
-    "headline": "Data Scientist focused on MLOps, industrial ML, and production delivery.",
+    "headline": "Data Scientist specializing in MLOps",
     "about": [
       "I am a Data Scientist with a strong MLOps and cloud foundation, focused on building production-ready machine learning systems rather than standalone models.",
       "My work spans the full ML lifecycle: data ingestion, feature engineering, model development, deployment, monitoring, and iteration. I recently led the development of an industrial predictive-maintenance system, combining interpretable ML models with a real-time monitoring dashboard to support operational decision-making in manufacturing environments.",
@@ -20,7 +20,30 @@
       "CFA Level I",
       "Dean's Honours List"
     ]
-  },
+  },  
+  "education": [
+    {
+      "institution": "University of British Columbia",
+      "degree": "Master of Data Science",
+      "dates": "Sep 2024 – Jul 2025",
+      "location": "Vancouver, Canada",
+      "highlights": [
+        "Graduate training in applied machine learning, MLOps, and data-driven decision making.",
+        "Strong emphasis on end-to-end ML systems, reproducibility, and production readiness."
+      ]
+    },
+    {
+      "institution": "University of Waterloo",
+      "degree": "B.Sc. in Mechanical Engineering",
+      "dates": "Sep 2018 – Apr 2024",
+      "location": "Waterloo, Canada",
+      "highlights": [
+        "Artificial Intelligence Option and Management Science Option.",
+        "Dean’s Honours List.",
+        "Strong foundation in systems engineering, controls, and applied mathematics."
+      ]
+    }
+  ],
   "skills": {
     "core": [
       "Python",
