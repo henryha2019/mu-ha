@@ -44,7 +44,17 @@ function renderHome(home) {
   const about = document.getElementById("homeAbout");
   if (about) {
     about.innerHTML = "";
-    (home.about || []).forEach((p) => about.appendChild(el("p", "", { text: p })));
+    (home.about || []).forEach((p) =>
+      about.appendChild(el("p", "", { text: p }))
+    );
+
+    if (Array.isArray(home.badges) && home.badges.length) {
+      const pills = el("div", "pills");
+      home.badges.forEach((b) =>
+        pills.appendChild(el("span", "pill", { text: b }))
+      );
+      about.appendChild(pills);
+    }
   }
 }
 

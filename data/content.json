@@ -3,9 +3,9 @@
     "name": "Mu (Henry) Ha",
     "role": "Data Scientist / MLOps",
     "location": "Surrey, BC (Vancouver Metro)",
-    "email": "mu2024ha@gmail.com",
+    "email": "m8ha@uwaterloo.ca",
     "linkedin": "https://www.linkedin.com/in/mu-henry-ha",
-    "github": "https://github.com/your-handle"
+    "github": "https://github.com/henryha2019"
   },
   "home": {
     "headline": "Data Scientist focused on MLOps, industrial ML, and production delivery.",
@@ -14,6 +14,11 @@
       "My work spans the full ML lifecycle: data ingestion, feature engineering, model development, deployment, monitoring, and iteration. I recently led the development of an industrial predictive-maintenance system, combining interpretable ML models with a real-time monitoring dashboard to support operational decision-making in manufacturing environments.",
       "I am particularly interested in the reliability and scalability of ML systems. My recent training and hands-on work emphasize Docker, Kubernetes, Linux, GitHub Actions, Terraform (Infrastructure as Code), and AWS, enabling reproducible pipelines, automated deployments, and maintainable cloud infrastructure.",
       "With a background that bridges mechanical engineering and data science, I bring a systems-level mindset to ML problems—grounding models in physical intuition, operational constraints, and real-world impact. I aim to build ML products that are not only accurate, but deployable, observable, and trusted by end users."
+    ],
+    "badges": [
+      "AWS Cloud Practitioner",
+      "CFA Level I",
+      "Dean's Honours List"
     ]
   },
   "skills": {
