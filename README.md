@@ -1,8 +1,3 @@
-Here is a **clean, professional, GitHub-ready rewrite** of `mu-ha/README.md`, aligned with a senior **Data Scientist / ML Engineer** portfolio and GitHub Pages deployment.
-
----
-
-````md
 # mu-ha — Personal Portfolio Website
 
 This repository contains the source code for my personal portfolio website.  
