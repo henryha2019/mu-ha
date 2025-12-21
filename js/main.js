@@ -1,63 +1,58 @@
-function setupMobileNav() {
-  const toggle = document.getElementById("navToggle");
+(function () {
+  const year = document.getElementById("year");
+  if (year) year.textContent = String(new Date().getFullYear());
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById("navToggle");
   const mobileNav = document.getElementById("mobileNav");
-  if (!toggle || !mobileNav) return;
 
-  const setOpen = (open) => {
-    toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    mobileNav.setAttribute("aria-hidden", open ? "false" : "true");
+  function setMobile(open) {
+    if (!navToggle || !mobileNav) return;
+    navToggle.setAttribute("aria-expanded", String(open));
     mobileNav.classList.toggle("is-open", open);
-  };
+    mobileNav.setAttribute("aria-hidden", String(!open));
+  }
 
-  toggle.addEventListener("click", () => {
-    const open = toggle.getAttribute("aria-expanded") === "true";
-    setOpen(!open);
-  });
+  if (navToggle && mobileNav) {
+    navToggle.addEventListener("click", () => {
+      const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+      setMobile(!isOpen);
+    });
 
-  mobileNav.querySelectorAll("a[href^='#']").forEach((a) => {
-    a.addEventListener("click", () => setOpen(false));
-  });
-}
+    mobileNav.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => setMobile(false));
+    });
+  }
 
-function setupReveal() {
-  const nodes = document.querySelectorAll(".reveal");
-  if (!nodes.length) return;
-
-  const obs = new IntersectionObserver(
+  // Reveal-on-scroll animation
+  const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.classList.add("is-visible");
-          obs.unobserve(e.target);
-        }
+        if (e.isIntersecting) e.target.classList.add("is-visible");
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.12 }
   );
 
-  nodes.forEach((n) => obs.observe(n));
-}
+  function observeReveals() {
+    document.querySelectorAll(".reveal").forEach((n) => observer.observe(n));
+  }
 
-function setupSmoothAnchors() {
-  document.querySelectorAll("a[href^='#']").forEach((a) => {
-    a.addEventListener("click", (e) => {
-      const href = a.getAttribute("href");
-      if (!href || href === "#") return;
+  // Render content then observe reveal nodes
+  const start = async () => {
+    if (window.__renderAll) await window.__renderAll();
+    observeReveals();
+  };
 
-      const target = document.querySelector(href);
-      if (!target) return;
-
-      e.preventDefault();
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-      history.pushState(null, "", href);
-    });
+  start().catch((err) => {
+    console.error(err);
+    const home = document.getElementById("home");
+    if (home) {
+      const div = document.createElement("div");
+      div.className = "container";
+      div.style.padding = "16px 0";
+      div.textContent = "Failed to load site content. Check console for details.";
+      home.appendChild(div);
+    }
   });
-}
-
-(async function init() {
-  setupMobileNav();
-  setupReveal();
-  setupSmoothAnchors();
-
-  if (window.__renderAll) await window.__renderAll();
 })();

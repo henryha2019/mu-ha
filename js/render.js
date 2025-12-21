@@ -1,6 +1,6 @@
 async function loadContent() {
   const res = await fetch("data/content.json", { cache: "no-store" });
-  if (!res.ok) throw new Error("Failed to load data/content.json");
+  if (!res.ok) throw new Error("Failed to load content.json");
   return await res.json();
 }
 
@@ -17,10 +17,10 @@ function el(tag, className, attrs = {}) {
 
 function renderMeta(meta) {
   const nameNodes = ["navName", "footerName"].map((id) => document.getElementById(id));
-  nameNodes.forEach((n) => n && (n.textContent = meta.name || "Mu (Henry) Ha"));
+  nameNodes.forEach((n) => n && (n.textContent = meta.name));
 
   const roleNode = document.getElementById("metaRole");
-  if (roleNode) roleNode.textContent = meta.role || "MLOps Engineer / Data Scientist";
+  if (roleNode) roleNode.textContent = meta.role;
 
   const links = [];
   if (meta.email) links.push({ label: meta.email, url: `mailto:${meta.email}` });
@@ -31,16 +31,49 @@ function renderMeta(meta) {
   if (metaLinks) {
     metaLinks.innerHTML = "";
     links.forEach((l) => {
-      metaLinks.appendChild(
-        el("a", "", { href: l.url, text: l.label, target: "_blank", rel: "noreferrer" })
-      );
+      const a = el("a", "", { href: l.url, text: l.label, target: "_blank", rel: "noreferrer" });
+      metaLinks.appendChild(a);
     });
   }
 }
 
+function renderResumes(resumes) {
+  const select = document.getElementById("resumeSelect");
+  const btn = document.getElementById("resumeBtn");
+
+  const selectM = document.getElementById("resumeSelectMobile");
+  const btnM = document.getElementById("resumeBtnMobile");
+
+  function setup(selectEl, btnEl) {
+    if (!selectEl || !btnEl) return;
+
+    selectEl.innerHTML = "";
+
+    (resumes || []).forEach((r, idx) => {
+      const opt = document.createElement("option");
+      opt.value = r.file;
+      opt.textContent = r.label;
+      if (idx === 0) opt.selected = true;
+      selectEl.appendChild(opt);
+    });
+
+    const setLink = (file) => {
+      btnEl.href = file;
+      btnEl.setAttribute("download", "");
+    };
+
+    if (resumes && resumes.length > 0) setLink(resumes[0].file);
+
+    selectEl.addEventListener("change", (e) => setLink(e.target.value));
+  }
+
+  setup(select, btn);
+  setup(selectM, btnM);
+}
+
 function renderHome(home) {
   const headline = document.getElementById("homeHeadline");
-  if (headline && home.headline) headline.textContent = home.headline;
+  if (headline) headline.textContent = home.headline;
 
   const about = document.getElementById("homeAbout");
   if (about) {
@@ -59,34 +92,25 @@ function renderProjects(projects) {
 
     const img = el("img", "card-img", {
       src: p.image || "",
-      alt: `${p.title || "Project"} preview`,
+      alt: `${p.title} preview`,
       loading: "lazy"
     });
 
     const body = el("div", "card-body");
     body.appendChild(el("h3", "", { text: p.title || "Project" }));
-    if (p.tagline) body.appendChild(el("p", "", { text: p.tagline }));
+    body.appendChild(el("p", "", { text: p.tagline || "" }));
 
-    if (p.bullets && p.bullets.length) {
-      const ul = el("ul", "work-bullets");
-      p.bullets.forEach((b) => ul.appendChild(el("li", "", { text: b })));
-      body.appendChild(ul);
-    }
+    const ul = el("ul", "work-bullets");
+    (p.bullets || []).forEach((b) => ul.appendChild(el("li", "", { text: b })));
+    body.appendChild(ul);
 
-    if (p.links && p.links.length) {
-      const actions = el("div", "hero-actions");
-      p.links.forEach((l) => {
-        actions.appendChild(
-          el("a", "btn btn-ghost", {
-            href: l.url,
-            text: l.label,
-            target: l.url.startsWith("#") ? "_self" : "_blank",
-            rel: "noreferrer"
-          })
-        );
-      });
-      body.appendChild(actions);
-    }
+    const actions = el("div", "hero-actions");
+    (p.links || []).forEach((l) => {
+      actions.appendChild(
+        el("a", "btn btn-ghost", { href: l.url, text: l.label, target: "_blank", rel: "noreferrer" })
+      );
+    });
+    body.appendChild(actions);
 
     card.appendChild(img);
     card.appendChild(body);
@@ -103,7 +127,7 @@ function renderWork(work) {
     const item = el("div", "work-item reveal");
 
     const top = el("div", "work-top");
-    top.appendChild(el("h3", "work-title", { text: `${w.title || ""} — ${w.company || ""}`.trim() }));
+    top.appendChild(el("h3", "work-title", { text: `${w.title} — ${w.company}` }));
     top.appendChild(el("div", "muted", { text: w.dates || "" }));
 
     item.appendChild(top);
@@ -141,45 +165,14 @@ function renderSkills(skills) {
   });
 }
 
-function renderResumes(resumes) {
-  const select = document.getElementById("resumeSelectSection");
-  const downloadBtn = document.getElementById("resumeDownloadSection");
-  const viewBtn = document.getElementById("resumeViewSection");
-
-  if (!select || !downloadBtn || !viewBtn) return;
-
-  select.innerHTML = "";
-
-  (resumes || []).forEach((r, idx) => {
-    const opt = document.createElement("option");
-    opt.value = r.file;
-    opt.textContent = r.label;
-    if (idx === 0) opt.selected = true;
-    select.appendChild(opt);
-  });
-
-  const setLinks = (file) => {
-    downloadBtn.href = file;
-    downloadBtn.setAttribute("download", "");
-    viewBtn.href = file;
-  };
-
-  if (resumes && resumes.length > 0) setLinks(resumes[0].file);
-
-  select.addEventListener("change", (e) => setLinks(e.target.value));
-}
-
 async function renderAll() {
   const data = await loadContent();
   renderMeta(data.meta || {});
+  renderResumes(data.resumes || []);
   renderHome(data.home || {});
   renderProjects(data.projects || []);
   renderWork(data.work || []);
-  renderResumes(data.resumes || []);
   renderSkills(data.skills || {});
-
-  const year = document.getElementById("year");
-  if (year) year.textContent = String(new Date().getFullYear());
 }
 
 window.__renderAll = renderAll;
