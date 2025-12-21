@@ -69,12 +69,119 @@ function renderProjects(projects) {
     (p.bullets || []).forEach((b) => ul.appendChild(el("li", "", { text: b })));
     body.appendChild(ul);
 
-    const actions = el("div", "hero-actions");
+    const actions = el("div", "card-actions");
     (p.links || []).forEach((l) => {
       actions.appendChild(
         el("a", "btn btn-ghost", { href: l.url, text: l.label, target: "_blank", rel: "noreferrer" })
       );
     });
+    body.appendChild(actions);
+
+    card.appendChild(img);
+    card.appendChild(body);
+    grid.appendChild(card);
+  });
+}
+
+/**
+ * Resume preview modal wiring
+ */
+function getResumeModal() {
+  return {
+    modal: document.getElementById("resumeModal"),
+    title: document.getElementById("resumeModalTitle"),
+    sub: document.getElementById("resumeModalSub"),
+    frame: document.getElementById("resumeModalFrame"),
+    close: document.getElementById("resumeModalClose"),
+    dl: document.getElementById("resumeModalDownload"),
+    openNew: document.getElementById("resumeModalOpenNew")
+  };
+}
+
+function setupResumeModalOnce() {
+  const { modal, close } = getResumeModal();
+  if (!modal || modal.__wired) return;
+
+  modal.__wired = true;
+
+  // Close button
+  if (close) close.addEventListener("click", () => modal.close());
+
+  // Click outside to close
+  modal.addEventListener("click", (e) => {
+    const inner = modal.querySelector(".modal-inner");
+    if (inner && !inner.contains(e.target)) modal.close();
+  });
+
+  // Esc is handled by <dialog> natively
+}
+
+function openResumeModal({ title, subtitle, pdfUrl }) {
+  const { modal, title: t, sub, frame, dl, openNew } = getResumeModal();
+  if (!modal || !frame) return;
+
+  if (t) t.textContent = title || "Resume Preview";
+  if (sub) sub.textContent = subtitle || "PDF preview";
+
+  // Set sources
+  frame.src = pdfUrl || "";
+  if (dl) dl.href = pdfUrl || "#";
+  if (openNew) openNew.href = pdfUrl || "#";
+
+  if (typeof modal.showModal === "function") modal.showModal();
+  else modal.setAttribute("open", "true");
+}
+
+function renderResumes(resumes) {
+  const grid = document.getElementById("resumeGrid");
+  if (!grid) return;
+  grid.innerHTML = "";
+
+  setupResumeModalOnce();
+
+  (resumes || []).forEach((r) => {
+    const card = el("article", "card reveal");
+
+    const img = el("img", "card-img", {
+      src: r.image || "assets/img/projects/jobai.png",
+      alt: `${r.title} preview`,
+      loading: "lazy"
+    });
+
+    const body = el("div", "card-body");
+    body.appendChild(el("h3", "", { text: r.title || "Resume" }));
+    body.appendChild(el("p", "", { text: r.tagline || "" }));
+
+    // Optional highlights (same visual style as projects)
+    const ul = el("ul", "work-bullets");
+    (r.bullets || []).forEach((b) => ul.appendChild(el("li", "", { text: b })));
+    body.appendChild(ul);
+
+    // Tags/pills
+    if (Array.isArray(r.tags) && r.tags.length) {
+      const pills = el("div", "pills");
+      r.tags.forEach((s) => pills.appendChild(el("span", "pill", { text: s })));
+      body.appendChild(pills);
+    }
+
+    // Actions
+    const actions = el("div", "card-actions");
+
+    const previewBtn = el("button", "btn btn-ghost", { type: "button" });
+    previewBtn.textContent = "Preview";
+    previewBtn.addEventListener("click", () => {
+      openResumeModal({
+        title: r.title,
+        subtitle: r.tagline,
+        pdfUrl: r.file
+      });
+    });
+
+    const downloadA = el("a", "btn", { href: r.file || "#", download: "" });
+    downloadA.textContent = "Download";
+
+    actions.appendChild(previewBtn);
+    actions.appendChild(downloadA);
     body.appendChild(actions);
 
     card.appendChild(img);
@@ -113,7 +220,7 @@ function renderSkills(skills) {
 
   const groups = [
     { title: "Core", items: skills.core || [] },
-    { title: "MLOps", items: skills.mlops || [] },
+    { title: "MLOps & Cloud", items: skills.mlops || [] },
     { title: "Tools", items: skills.tools || [] }
   ];
 
@@ -136,6 +243,7 @@ async function renderAll() {
   renderMeta(data.meta || {});
   renderHome(data.home || {});
   renderProjects(data.projects || []);
+  renderResumes(data.resumes || []);
   renderWork(data.work || []);
   renderSkills(data.skills || {});
 }

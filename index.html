@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Mu (Henry) Ha — Data Scientist Portfolio" />
-    <title>Mu (Henry) Ha | Data Scientist</title>
+    <meta name="description" content="Mu (Henry) Ha — Data Scientist / MLOps Portfolio" />
+    <title>Mu (Henry) Ha | Data Scientist / MLOps</title>
 
     <link rel="icon" href="assets/icons/favicon.ico" />
     <link rel="stylesheet" href="css/theme.css" />
@@ -23,15 +23,12 @@
         <nav class="nav" aria-label="Primary">
           <a href="#home" class="nav-link">Home</a>
           <a href="#projects" class="nav-link">Projects</a>
+          <a href="#resume" class="nav-link">Resume</a>
           <a href="#work" class="nav-link">Work Experience</a>
           <a href="#skills" class="nav-link">Skills</a>
         </nav>
 
-        <div class="header-cta">
-          <a class="btn btn-ghost" id="resumeBtn" href="assets/docs/resume.pdf" download>
-            Download Resume
-          </a>
-        </div>
+        <!-- (Removed Download Resume button per request) -->
 
         <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
           <span class="nav-toggle-bar"></span>
@@ -43,9 +40,9 @@
       <div class="mobile-nav container" id="mobileNav" aria-hidden="true">
         <a href="#home" class="nav-link">Home</a>
         <a href="#projects" class="nav-link">Projects</a>
+        <a href="#resume" class="nav-link">Resume</a>
         <a href="#work" class="nav-link">Work Experience</a>
         <a href="#skills" class="nav-link">Skills</a>
-        <a class="btn btn-ghost" href="assets/docs/resume.pdf" download>Download Resume</a>
       </div>
     </header>
 
@@ -63,17 +60,12 @@
           </div>
 
           <div class="hero-content reveal">
-            <p class="eyebrow" id="metaRole">Data Scientist</p>
+            <p class="eyebrow" id="metaRole">Data Scientist / MLOps</p>
             <h1 class="headline" id="homeHeadline">
-              Data Scientist focused on industrial ML, MLOps, and product delivery.
+              Data Scientist focused on MLOps, industrial ML, and product delivery.
             </h1>
 
             <div class="prose" id="homeAbout"></div>
-
-            <div class="hero-actions">
-              <a class="btn" href="#projects">View Projects</a>
-              <a class="btn btn-ghost" href="#work">Work Experience</a>
-            </div>
 
             <div class="meta-links" id="metaLinks"></div>
           </div>
@@ -92,8 +84,23 @@
         </div>
       </section>
 
+      <!-- Resume -->
+      <section id="resume" class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Resume</h2>
+            <p class="muted">
+              Targeted versions for Data Science / MLOps / Cloud and Mechanical Engineering roles.
+              Preview in-browser or download the PDF.
+            </p>
+          </div>
+
+          <div class="grid projects-grid" id="resumeGrid"></div>
+        </div>
+      </section>
+
       <!-- Work Experience -->
-      <section id="work" class="section section-alt">
+      <section id="work" class="section">
         <div class="container">
           <div class="section-head">
             <h2>Work Experience</h2>
@@ -105,7 +112,7 @@
       </section>
 
       <!-- Skills -->
-      <section id="skills" class="section">
+      <section id="skills" class="section section-alt">
         <div class="container">
           <div class="section-head">
             <h2>Skills</h2>
@@ -124,6 +131,36 @@
         </div>
       </footer>
     </main>
+
+    <!-- Resume preview modal (single shared dialog) -->
+    <dialog class="modal" id="resumeModal" aria-label="Resume preview">
+      <div class="modal-inner">
+        <div class="modal-head">
+          <div>
+            <div class="modal-title" id="resumeModalTitle">Resume Preview</div>
+            <div class="muted modal-sub" id="resumeModalSub">PDF preview</div>
+          </div>
+          <button class="btn btn-ghost modal-close" id="resumeModalClose" type="button">Close</button>
+        </div>
+
+        <div class="modal-body">
+          <iframe
+            id="resumeModalFrame"
+            title="Resume PDF Preview"
+            class="modal-frame"
+            src=""
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <div class="modal-foot">
+          <a class="btn" id="resumeModalDownload" href="#" download>Download PDF</a>
+          <a class="btn btn-ghost" id="resumeModalOpenNew" href="#" target="_blank" rel="noreferrer">
+            Open in new tab
+          </a>
+        </div>
+      </div>
+    </dialog>
 
     <script src="js/render.js"></script>
     <script src="js/main.js"></script>

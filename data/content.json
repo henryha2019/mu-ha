@@ -1,33 +1,117 @@
 {
   "meta": {
     "name": "Mu (Henry) Ha",
-    "role": "Data Scientist",
-    "location": "Vancouver, BC",
-    "email": "your.email@example.com",
-    "linkedin": "https://linkedin.com/in/your-handle",
+    "role": "Data Scientist / MLOps",
+    "location": "Surrey, BC (Vancouver Metro)",
+    "email": "mu2024ha@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/mu-henry-ha",
     "github": "https://github.com/your-handle"
   },
   "home": {
-    "headline": "Data Scientist focused on industrial ML, MLOps, and product delivery.",
+    "headline": "Data Scientist focused on MLOps, industrial ML, and production delivery.",
     "about": [
-      "I build production-grade data products end-to-end: data pipelines, modeling, deployment, and monitoring.",
-      "Recent work includes predictive maintenance and ML monitoring systems, with a strong emphasis on reproducibility and reliability."
+      "I am a Data Scientist with a strong MLOps and cloud foundation, focused on building production-ready machine learning systems rather than standalone models.",
+      "My work spans the full ML lifecycle: data ingestion, feature engineering, model development, deployment, monitoring, and iteration. I recently led the development of an industrial predictive-maintenance system, combining interpretable ML models with a real-time monitoring dashboard to support operational decision-making in manufacturing environments.",
+      "I am particularly interested in the reliability and scalability of ML systems. My recent training and hands-on work emphasize Docker, Kubernetes, Linux, GitHub Actions, Terraform (Infrastructure as Code), and AWS, enabling reproducible pipelines, automated deployments, and maintainable cloud infrastructure.",
+      "With a background that bridges mechanical engineering and data science, I bring a systems-level mindset to ML problems—grounding models in physical intuition, operational constraints, and real-world impact. I aim to build ML products that are not only accurate, but deployable, observable, and trusted by end users."
     ]
   },
   "skills": {
-    "core": ["Python", "SQL", "Pandas", "scikit-learn", "Statistics", "Experimentation"],
-    "mlops": ["Docker", "CI/CD", "AWS", "Terraform", "Model Monitoring", "Feature Engineering"],
-    "tools": ["Git", "Linux", "PostgreSQL", "Dash/Plotly", "FastAPI"]
+    "core": [
+      "Python",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "scikit-learn",
+      "PyTorch",
+      "Statistics",
+      "Experimentation"
+    ],
+    "mlops": [
+      "Docker",
+      "Kubernetes",
+      "Linux",
+      "GitHub Actions",
+      "Terraform (IaC)",
+      "AWS (EC2/S3/IAM)",
+      "Model Monitoring",
+      "Reproducible Pipelines"
+    ],
+    "tools": [
+      "Git",
+      "PostgreSQL",
+      "FastAPI",
+      "Dash/Plotly",
+      "CI/CD",
+      "Data Visualization",
+      "Feature Engineering"
+    ]
   },
+  "resumes": [
+    {
+      "title": "Data Science Resume",
+      "tagline": "DS-focused version (projects, modeling, analytics).",
+      "image": "assets/img/projects/jobai.png",
+      "file": "assets/docs/resume-ds.pdf",
+      "tags": ["Data Science", "ML", "Dash", "SQL"],
+      "bullets": [
+        "Highlights ML project outcomes (predictive maintenance, segmentation, forecasting).",
+        "Emphasizes modeling + evaluation and practical delivery."
+      ]
+    },
+    {
+      "title": "MLOps / Cloud Resume",
+      "tagline": "Cloud + production delivery (AWS + automation + reliability).",
+      "image": "assets/img/projects/brilliant-automation.png",
+      "file": "assets/docs/resume-mlops.pdf",
+      "tags": ["MLOps", "AWS", "CI/CD", "Terraform"],
+      "bullets": [
+        "Operational focus: Docker, Kubernetes, Linux, GitHub Actions, Terraform.",
+        "Positions projects as production-grade systems (deployment, monitoring, reproducibility)."
+      ]
+    },
+    {
+      "title": "Mechanical Engineering Resume",
+      "tagline": "ME-focused version (design, manufacturing, GD&T).",
+      "image": "assets/img/projects/brilliant-automation.png",
+      "file": "assets/docs/resume-me.pdf",
+      "tags": ["SolidWorks", "NX", "DFM/DFA", "GD&T"],
+      "bullets": [
+        "Mechanical design + manufacturing experience with full-cycle engineering.",
+        "Strong foundation bridging physical systems with data/automation."
+      ]
+    }
+  ],
   "work": [
     {
-      "company": "Brilliant Automation (Capstone)",
+      "company": "Brilliant Automation (UBC MDS Capstone)",
       "title": "Data Scientist / ML Engineer",
-      "dates": "2025",
+      "dates": "Apr 2025 – Jun 2025",
+      "subtitle": "Predictive maintenance + monitoring dashboard for industrial equipment.",
       "highlights": [
-        "Built an industrial equipment health monitoring pipeline and dashboard.",
-        "Implemented feature extraction on sensor waveform data and trained interpretable models.",
-        "Deployed reproducible workflows with environment management and automated reporting."
+        "Developed an equipment health monitoring pipeline and trained models (Ridge, Random Forest, LSTM) balancing accuracy and interpretability.",
+        "Built an interactive Dash dashboard for real-time health scoring, trends, and maintenance alerts.",
+        "Strengthened reproducibility and operational readiness (structured workflows, environment management, deployment-minded design)."
+      ]
+    },
+    {
+      "company": "Resolution Life US",
+      "title": "AWS Cloud Engineer / Cloud Architect",
+      "dates": "Sep 2021 – Apr 2022",
+      "subtitle": "Automation and standardization for AWS infrastructure operations.",
+      "highlights": [
+        "Delivered a standardized EC2 'golden image' with essential tooling, improving server deployment efficiency by ~80%.",
+        "Automated monthly AWS usage dashboards to increase visibility and support decision-making."
+      ]
+    },
+    {
+      "company": "University of Waterloo",
+      "title": "Data Scientist Research Assistant",
+      "dates": "Jan 2021 – Apr 2021",
+      "subtitle": "Computer vision for remote sensing (ice concentration and classification).",
+      "highlights": [
+        "Applied U-Net to satellite imagery to predict ice concentration and classify land/ice/water.",
+        "Achieved strong validation performance (low loss/MSE and high classification accuracy)."
       ]
     }
   ],
@@ -41,21 +125,37 @@
         { "label": "GitHub", "url": "https://github.com/your-handle/brilliant-automation" }
       ],
       "bullets": [
-        "Sensor data ingestion, DSP feature extraction, model training and evaluation.",
-        "Dashboard for equipment health signals and operational metrics."
+        "Sensor ingestion + DSP feature extraction + model training and evaluation.",
+        "Dash monitoring dashboard for health scoring, trends, and operational alerts.",
+        "Built with production mindset: reproducibility, clear interfaces, and deployment-ready structure."
       ]
     },
     {
       "title": "JobAI",
-      "tagline": "AI job application assistant (resume/profile parsing + workflows).",
+      "tagline": "AI job application assistant (profile/resume parsing + workflows).",
       "image": "assets/img/projects/jobai.png",
       "links": [
         { "label": "Demo", "url": "#projects" },
         { "label": "GitHub", "url": "https://github.com/your-handle/jobai" }
       ],
       "bullets": [
-        "FastAPI backend with profile/resume parsing and structured outputs.",
-        "Roadmap includes credits billing + automation extensions."
+        "FastAPI backend for structured profile/resume parsing and automation workflows.",
+        "Designed to evolve into a product: credits, integrations, and scalable deployment."
+      ]
+    },
+    {
+      "title": "MLOps Foundations (Hands-on)",
+      "tagline": "Applied learning: Docker, Kubernetes, Linux, CI/CD, Terraform, AWS.",
+      "image": "assets/img/projects/brilliant-automation.png",
+      "links": [
+        { "label": "Roadmap", "url": "#skills" }
+      ],
+      "bullets": [
+        "Docker Mastery Crash Course + Kubernetes fundamentals applied to containerized services.",
+        "Linux Full Course: operational fluency (shell, permissions, system basics).",
+        "GitHub Actions Tutorial: CI checks, automated builds, and deployment workflows.",
+        "Terraform courses: Infrastructure as Code patterns for repeatable environments.",
+        "AWS Cloud Technical Essentials + MLOps Specialization (C1): modern MLOps lifecycle patterns."
       ]
     }
   ]
