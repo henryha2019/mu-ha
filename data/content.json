@@ -1,61 +1,97 @@
 {
   "meta": {
     "name": "Mu (Henry) Ha",
-    "role": "Data Scientist",
+    "role": "MLOps Engineer / Data Scientist",
     "location": "Vancouver, BC",
-    "email": "your.email@example.com",
-    "linkedin": "https://linkedin.com/in/your-handle",
-    "github": "https://github.com/your-handle"
+    "email": "m8ha@uwaterloo.ca",
+    "linkedin": "https://www.linkedin.com/in/mu-henry-ha",
+    "github": "https://github.com/henryha2019"
   },
-  "home": {
-    "headline": "Data Scientist focused on industrial ML, MLOps, and product delivery.",
-    "about": [
-      "I build production-grade data products end-to-end: data pipelines, modeling, deployment, and monitoring.",
-      "Recent work includes predictive maintenance and ML monitoring systems, with a strong emphasis on reproducibility and reliability."
-    ]
-  },
-  "skills": {
-    "core": ["Python", "SQL", "Pandas", "scikit-learn", "Statistics", "Experimentation"],
-    "mlops": ["Docker", "CI/CD", "AWS", "Terraform", "Model Monitoring", "Feature Engineering"],
-    "tools": ["Git", "Linux", "PostgreSQL", "Dash/Plotly", "FastAPI"]
-  },
-  "work": [
+
+  "resumes": [
     {
-      "company": "Brilliant Automation (Capstone)",
-      "title": "Data Scientist / ML Engineer",
-      "dates": "2025",
-      "highlights": [
-        "Built an industrial equipment health monitoring pipeline and dashboard.",
-        "Implemented feature extraction on sensor waveform data and trained interpretable models.",
-        "Deployed reproducible workflows with environment management and automated reporting."
-      ]
+      "label": "MLOps / ML Engineer Resume",
+      "file": "assets/docs/resume-mlops.pdf"
+    },
+    {
+      "label": "Data Scientist Resume",
+      "file": "assets/docs/resume-ds.pdf"
+    },
+    {
+      "label": "Mechanical Systems Resume",
+      "file": "assets/docs/resume-me.pdf"
     }
   ],
-  "projects": [
+
+  "home": {
+    "headline": "MLOps Engineer and Data Scientist building production-grade machine learning systems.",
+    "about": [
+      "I design and deploy end-to-end ML systems: data pipelines, modeling, cloud infrastructure, monitoring, and dashboards.",
+      "My background combines applied machine learning, AWS cloud architecture, and engineering rigor, with experience in predictive maintenance, computer vision, and time-series forecasting.",
+      "I completed an intensive MLOps learning plan and focus on reliable, interpretable, scalable ML delivery."
+    ]
+  },
+
+  "skills": {
+    "core": ["Python", "SQL", "Statistics", "Machine Learning", "Time Series", "Computer Vision"],
+    "mlops": ["AWS (EC2, S3, IAM)", "Docker", "CI/CD", "Model Monitoring", "Experiment Tracking", "Production Pipelines"],
+    "tools": ["PyTorch", "scikit-learn", "Pandas", "NumPy", "TensorFlow", "Dash", "Git", "Linux"]
+  },
+
+  "work": [
     {
-      "title": "Brilliant Automation",
-      "tagline": "Interpretable ML for industrial equipment health monitoring.",
-      "image": "assets/img/projects/brilliant-automation.png",
-      "links": [
-        { "label": "Case Study", "url": "#projects" },
-        { "label": "GitHub", "url": "https://github.com/your-handle/brilliant-automation" }
-      ],
-      "bullets": [
-        "Sensor data ingestion, DSP feature extraction, model training and evaluation.",
-        "Dashboard for equipment health signals and operational metrics."
+      "company": "Brilliant Automation",
+      "title": "Data Scientist / MLOps Engineer",
+      "dates": "Apr 2025 – Jun 2025",
+      "highlights": [
+        "Developed a predictive maintenance system for industrial equipment using sensor data.",
+        "Built and evaluated models (Ridge, Random Forest, LSTM) with emphasis on interpretability and operational usability.",
+        "Designed feature extraction workflows for time-series signals.",
+        "Created dashboards to visualize machine health, trends, and maintenance alerts."
       ]
     },
     {
-      "title": "JobAI",
-      "tagline": "AI job application assistant (resume/profile parsing + workflows).",
-      "image": "assets/img/projects/jobai.png",
-      "links": [
-        { "label": "Demo", "url": "#projects" },
-        { "label": "GitHub", "url": "https://github.com/your-handle/jobai" }
-      ],
+      "company": "Resolution Life (US)",
+      "title": "AWS Cloud Engineer",
+      "dates": "Sep 2021 – Apr 2022",
+      "highlights": [
+        "Delivered standardized EC2 golden images to streamline deployments (reported ~80% efficiency improvement).",
+        "Automated AWS usage and cost dashboards to support decision-making."
+      ]
+    },
+    {
+      "company": "University of Waterloo",
+      "title": "Data Scientist Research Assistant",
+      "dates": "Jan 2021 – Apr 2021",
+      "highlights": [
+        "Applied U-Net to satellite imagery for ice concentration prediction and land classification.",
+        "Achieved strong validation performance (0.026 MSE; ~0.9 classification accuracy).",
+        "Evaluated multiple model architectures to select the most effective approach."
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Brilliant Automation",
+      "tagline": "Predictive maintenance and equipment health monitoring (end-to-end).",
+      "image": "assets/img/projects/brilliant-automation.png",
+      "links": [{ "label": "Case Study", "url": "#projects" }],
       "bullets": [
-        "FastAPI backend with profile/resume parsing and structured outputs.",
-        "Roadmap includes credits billing + automation extensions."
+        "Sensor data ingestion and feature engineering for time-series signals.",
+        "Interpretable ML models for failure forecasting.",
+        "Dashboards for operational monitoring and decision support."
+      ]
+    },
+    {
+      "title": "AI Wall Painting Robot",
+      "tagline": "Computer vision segmentation for robotic painting workflows.",
+      "image": "assets/img/projects/jobai.png",
+      "links": [{ "label": "Project", "url": "#projects" }],
+      "bullets": [
+        "Implemented PSPNet for wall segmentation (92% accuracy, 73% IoU).",
+        "Encoder-decoder design with pyramid pooling.",
+        "Data preprocessing and augmentation for industrial CV."
       ]
     }
   ]

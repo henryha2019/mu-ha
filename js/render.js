@@ -37,6 +37,40 @@ function renderMeta(meta) {
   }
 }
 
+function renderResumes(resumes) {
+  const select = document.getElementById("resumeSelect");
+  const btn = document.getElementById("resumeBtn");
+
+  const selectM = document.getElementById("resumeSelectMobile");
+  const btnM = document.getElementById("resumeBtnMobile");
+
+  function setup(selectEl, btnEl) {
+    if (!selectEl || !btnEl) return;
+
+    selectEl.innerHTML = "";
+
+    (resumes || []).forEach((r, idx) => {
+      const opt = document.createElement("option");
+      opt.value = r.file;
+      opt.textContent = r.label;
+      if (idx === 0) opt.selected = true;
+      selectEl.appendChild(opt);
+    });
+
+    const setLink = (file) => {
+      btnEl.href = file;
+      btnEl.setAttribute("download", "");
+    };
+
+    if (resumes && resumes.length > 0) setLink(resumes[0].file);
+
+    selectEl.addEventListener("change", (e) => setLink(e.target.value));
+  }
+
+  setup(select, btn);
+  setup(selectM, btnM);
+}
+
 function renderHome(home) {
   const headline = document.getElementById("homeHeadline");
   if (headline) headline.textContent = home.headline;
@@ -55,6 +89,7 @@ function renderProjects(projects) {
 
   (projects || []).forEach((p) => {
     const card = el("article", "card reveal");
+
     const img = el("img", "card-img", {
       src: p.image || "",
       alt: `${p.title} preview`,
@@ -96,7 +131,6 @@ function renderWork(work) {
     top.appendChild(el("div", "muted", { text: w.dates || "" }));
 
     item.appendChild(top);
-    if (w.subtitle) item.appendChild(el("p", "work-sub", { text: w.subtitle }));
 
     const ul = el("ul", "work-bullets");
     (w.highlights || []).forEach((h) => ul.appendChild(el("li", "", { text: h })));
@@ -134,6 +168,7 @@ function renderSkills(skills) {
 async function renderAll() {
   const data = await loadContent();
   renderMeta(data.meta || {});
+  renderResumes(data.resumes || []);
   renderHome(data.home || {});
   renderProjects(data.projects || []);
   renderWork(data.work || []);

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Mu (Henry) Ha — Data Scientist Portfolio" />
-    <title>Mu (Henry) Ha | Data Scientist</title>
+    <meta name="description" content="Mu (Henry) Ha — MLOps Engineer / Data Scientist Portfolio" />
+    <title>Mu (Henry) Ha | MLOps Engineer / Data Scientist</title>
 
     <link rel="icon" href="assets/icons/favicon.ico" />
     <link rel="stylesheet" href="css/theme.css" />
@@ -27,10 +27,12 @@
           <a href="#skills" class="nav-link">Skills</a>
         </nav>
 
-        <div class="header-cta">
-          <a class="btn btn-ghost" id="resumeBtn" href="assets/docs/resume.pdf" download>
-            Download Resume
-          </a>
+        <!-- Desktop resume dropdown -->
+        <div class="header-cta" id="resumeControls">
+          <label class="sr-only" for="resumeSelect">Select resume</label>
+          <select id="resumeSelect" class="select"></select>
+
+          <a class="btn btn-ghost" id="resumeBtn" href="#" download>Download</a>
         </div>
 
         <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -40,12 +42,18 @@
         </button>
       </div>
 
+      <!-- Mobile menu -->
       <div class="mobile-nav container" id="mobileNav" aria-hidden="true">
         <a href="#home" class="nav-link">Home</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#work" class="nav-link">Work Experience</a>
         <a href="#skills" class="nav-link">Skills</a>
-        <a class="btn btn-ghost" href="assets/docs/resume.pdf" download>Download Resume</a>
+
+        <div class="mobile-resume">
+          <label class="sr-only" for="resumeSelectMobile">Select resume</label>
+          <select id="resumeSelectMobile" class="select"></select>
+          <a class="btn btn-ghost" id="resumeBtnMobile" href="#" download>Download</a>
+        </div>
       </div>
     </header>
 
@@ -63,9 +71,9 @@
           </div>
 
           <div class="hero-content reveal">
-            <p class="eyebrow" id="metaRole">Data Scientist</p>
+            <p class="eyebrow" id="metaRole">MLOps Engineer / Data Scientist</p>
             <h1 class="headline" id="homeHeadline">
-              Data Scientist focused on industrial ML, MLOps, and product delivery.
+              MLOps Engineer and Data Scientist building production-grade machine learning systems.
             </h1>
 
             <div class="prose" id="homeAbout"></div>
@@ -85,7 +93,7 @@
         <div class="container">
           <div class="section-head">
             <h2>Projects</h2>
-            <p class="muted">Selected work with emphasis on measurable outcomes and production readiness.</p>
+            <p class="muted">Selected work with emphasis on production readiness and measurable impact.</p>
           </div>
 
           <div class="grid projects-grid" id="projectsGrid"></div>
@@ -109,7 +117,7 @@
         <div class="container">
           <div class="section-head">
             <h2>Skills</h2>
-            <p class="muted">Core competencies and tools I use to ship reliable data products.</p>
+            <p class="muted">Technical competencies for shipping reliable ML systems.</p>
           </div>
 
           <div class="grid skills-grid" id="skillsGrid"></div>
