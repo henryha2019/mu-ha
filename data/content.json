@@ -85,33 +85,63 @@
   "work": [
     {
       "company": "Brilliant Automation (UBC MDS Capstone)",
-      "title": "Data Scientist / ML Engineer",
+      "title": "Data Scientist / Mechanical Systems Engineer",
       "dates": "Apr 2025 – Jun 2025",
-      "subtitle": "Predictive maintenance + monitoring dashboard for industrial equipment.",
+      "subtitle": "Predictive maintenance and automation for industrial equipment.",
       "highlights": [
-        "Developed an equipment health monitoring pipeline and trained models (Ridge, Random Forest, LSTM) balancing accuracy and interpretability.",
-        "Built an interactive Dash dashboard for real-time health scoring, trends, and maintenance alerts.",
-        "Strengthened reproducibility and operational readiness (structured workflows, environment management, deployment-minded design)."
+        "Developed an end-to-end predictive maintenance system to monitor the health of industrial machines using sensor data.",
+        "Built and trained machine learning models (Ridge, Random Forest, LSTM) to forecast potential failures, balancing accuracy with interpretability for operational use.",
+        "Designed feature engineering and time-series modeling workflows to support health scoring and failure prediction.",
+        "Created an interactive dashboard using Dash to visualize real-time machine health scores, historical trends, and maintenance alerts for operations teams.",
+        "Applied systems engineering principles and lean manufacturing concepts to streamline data workflows and improve system reliability."
       ]
     },
     {
       "company": "Resolution Life US",
       "title": "AWS Cloud Engineer / Cloud Architect",
       "dates": "Sep 2021 – Apr 2022",
-      "subtitle": "Automation and standardization for AWS infrastructure operations.",
+      "subtitle": "Cloud infrastructure automation and operational efficiency.",
       "highlights": [
-        "Delivered a standardized EC2 'golden image' with essential tooling, improving server deployment efficiency by ~80%.",
-        "Automated monthly AWS usage dashboards to increase visibility and support decision-making."
+        "Delivered a standardized EC2 \"golden image\" with preinstalled essential applications, streamlining server deployment and improving provisioning efficiency by approximately 80%.",
+        "Automated the generation of monthly dashboards to visualize AWS usage and costs, improving operational visibility and decision-making.",
+        "Worked closely with infrastructure and operations teams to standardize cloud environments and improve reliability across AWS deployments."
       ]
     },
     {
       "company": "University of Waterloo",
       "title": "Data Scientist Research Assistant",
       "dates": "Jan 2021 – Apr 2021",
-      "subtitle": "Computer vision for remote sensing (ice concentration and classification).",
+      "subtitle": "Computer vision research for satellite-based ice concentration analysis.",
       "highlights": [
-        "Applied U-Net to satellite imagery to predict ice concentration and classify land/ice/water.",
-        "Achieved strong validation performance (low loss/MSE and high classification accuracy)."
+        "Applied U-Net architectures to satellite imagery to predict ice concentration and classify land, ice, and water regions.",
+        "Achieved a validation loss and MSE of 0.026 on regression tasks and approximately 0.90 validation accuracy for classification.",
+        "Evaluated multiple regression methods and model structures to identify and implement the most effective approaches.",
+        "Demonstrated the application of deep learning techniques to real-world remote sensing data."
+      ]
+    },
+    {
+      "company": "The Weir Group",
+      "title": "Manufacturing Engineer",
+      "dates": "Sep 2019 – Apr 2020",
+      "subtitle": "Production cost estimation, testing, and process optimization.",
+      "highlights": [
+        "Computed production costs for 10+ products and created Bills of Materials (BOMs) and routings in SAP to support manufacturing and supply chain planning.",
+        "Conducted mechanical testing and quality control activities, including gasket compression tests, deformation analysis, and root cause analysis for design deviations.",
+        "Re-engineered and optimized the cost-estimation spreadsheet, improving calculation efficiency by approximately 30–40%.",
+        "Ensured compliance with safety standards and manufacturing best practices while supporting production operations."
+      ]
+    },
+    {
+      "company": "The Weir Group",
+      "title": "Design Engineer",
+      "dates": "Jan 2019 – Apr 2019",
+      "subtitle": "Mechanical design and engineering documentation for industrial systems.",
+      "highlights": [
+        "Designed and modeled a circular manifold for a chemical plant and retrofitted multiple spool systems for client projects.",
+        "Generated over 100 professional 3D models and 2D engineering drawings using Siemens NX and SolidWorks, including GD&T annotations.",
+        "Worked in a fast-paced environment, producing 30+ detailed drawings per day to meet project deadlines.",
+        "Coordinated with production and fabrication teams to support design-for-manufacturing (DFM) and design-for-assembly (DFA).",
+        "Performed design verification tasks including material selection, seal geometry review, and basic stress checks to ensure compliance with client and industry requirements."
       ]
     }
   ],
