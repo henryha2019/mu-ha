@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "name": "Mu (Henry) Ha",
+    "role": "Data Scientist",
+    "location": "Vancouver, BC",
+    "email": "your.email@example.com",
+    "linkedin": "https://linkedin.com/in/your-handle",
+    "github": "https://github.com/your-handle"
+  },
+  "home": {
+    "headline": "Data Scientist focused on industrial ML, MLOps, and product delivery.",
+    "about": [
+      "I build production-grade data products end-to-end: data pipelines, modeling, deployment, and monitoring.",
+      "Recent work includes predictive maintenance and ML monitoring systems, with a strong emphasis on reproducibility and reliability."
+    ]
+  },
+  "skills": {
+    "core": ["Python", "SQL", "Pandas", "scikit-learn", "Statistics", "Experimentation"],
+    "mlops": ["Docker", "CI/CD", "AWS", "Terraform", "Model Monitoring", "Feature Engineering"],
+    "tools": ["Git", "Linux", "PostgreSQL", "Dash/Plotly", "FastAPI"]
+  },
+  "work": [
+    {
+      "company": "Brilliant Automation (Capstone)",
+      "title": "Data Scientist / ML Engineer",
+      "dates": "2025",
+      "highlights": [
+        "Built an industrial equipment health monitoring pipeline and dashboard.",
+        "Implemented feature extraction on sensor waveform data and trained interpretable models.",
+        "Deployed reproducible workflows with environment management and automated reporting."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Brilliant Automation",
+      "tagline": "Interpretable ML for industrial equipment health monitoring.",
+      "image": "assets/img/projects/brilliant-automation.png",
+      "links": [
+        { "label": "Case Study", "url": "#projects" },
+        { "label": "GitHub", "url": "https://github.com/your-handle/brilliant-automation" }
+      ],
+      "bullets": [
+        "Sensor data ingestion, DSP feature extraction, model training and evaluation.",
+        "Dashboard for equipment health signals and operational metrics."
+      ]
+    },
+    {
+      "title": "JobAI",
+      "tagline": "AI job application assistant (resume/profile parsing + workflows).",
+      "image": "assets/img/projects/jobai.png",
+      "links": [
+        { "label": "Demo", "url": "#projects" },
+        { "label": "GitHub", "url": "https://github.com/your-handle/jobai" }
+      ],
+      "bullets": [
+        "FastAPI backend with profile/resume parsing and structured outputs.",
+        "Roadmap includes credits billing + automation extensions."
+      ]
+    }
+  ]
+}

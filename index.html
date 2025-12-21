@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mu (Henry) Ha — Data Scientist Portfolio" />
+    <title>Mu (Henry) Ha | Data Scientist</title>
+
+    <link rel="icon" href="assets/icons/favicon.ico" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Header / Nav -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Go to Home">
+          <span class="brand-mark"></span>
+          <span class="brand-text" id="navName">Mu (Henry) Ha</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#work" class="nav-link">Work Experience</a>
+          <a href="#skills" class="nav-link">Skills</a>
+        </nav>
+
+        <div class="header-cta">
+          <a class="btn btn-ghost" id="resumeBtn" href="assets/docs/resume.pdf" download>
+            Download Resume
+          </a>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+
+      <div class="mobile-nav container" id="mobileNav" aria-hidden="true">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#work" class="nav-link">Work Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a class="btn btn-ghost" href="assets/docs/resume.pdf" download>Download Resume</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Home -->
+      <section id="home" class="section hero">
+        <div class="container hero-grid">
+          <div class="hero-media reveal">
+            <img
+              class="profile-img"
+              src="assets/img/profile.jpg"
+              alt="Profile photo"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="hero-content reveal">
+            <p class="eyebrow" id="metaRole">Data Scientist</p>
+            <h1 class="headline" id="homeHeadline">
+              Data Scientist focused on industrial ML, MLOps, and product delivery.
+            </h1>
+
+            <div class="prose" id="homeAbout"></div>
+
+            <div class="hero-actions">
+              <a class="btn" href="#projects">View Projects</a>
+              <a class="btn btn-ghost" href="#work">Work Experience</a>
+            </div>
+
+            <div class="meta-links" id="metaLinks"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Projects</h2>
+            <p class="muted">Selected work with emphasis on measurable outcomes and production readiness.</p>
+          </div>
+
+          <div class="grid projects-grid" id="projectsGrid"></div>
+        </div>
+      </section>
+
+      <!-- Work Experience -->
+      <section id="work" class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Work Experience</h2>
+            <p class="muted">Impact-focused roles and engagements.</p>
+          </div>
+
+          <div class="list work-list" id="workList"></div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Skills</h2>
+            <p class="muted">Core competencies and tools I use to ship reliable data products.</p>
+          </div>
+
+          <div class="grid skills-grid" id="skillsGrid"></div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <p class="muted">© <span id="year"></span> <span id="footerName">Mu (Henry) Ha</span></p>
+          <a class="muted" href="#home">Back to top</a>
+        </div>
+      </footer>
+    </main>
+
+    <script src="js/render.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
