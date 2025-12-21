@@ -13,7 +13,7 @@
 
   <body>
     <!-- Header / Nav -->
-    <header class="site-header">
+    <header class="site-header" id="top">
       <div class="container header-inner">
         <a class="brand" href="#home" aria-label="Go to Home">
           <span class="brand-mark"></span>
@@ -24,15 +24,12 @@
           <a href="#home" class="nav-link">Home</a>
           <a href="#projects" class="nav-link">Projects</a>
           <a href="#work" class="nav-link">Work Experience</a>
+          <a href="#resume" class="nav-link">Resume</a>
           <a href="#skills" class="nav-link">Skills</a>
         </nav>
 
-        <!-- Desktop resume dropdown -->
-        <div class="header-cta" id="resumeControls">
-          <label class="sr-only" for="resumeSelect">Select resume</label>
-          <select id="resumeSelect" class="select"></select>
-
-          <a class="btn btn-ghost" id="resumeBtn" href="#" download>Download</a>
+        <div class="header-cta">
+          <a class="btn btn-ghost" href="#resume">Resume</a>
         </div>
 
         <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -47,13 +44,8 @@
         <a href="#home" class="nav-link">Home</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#work" class="nav-link">Work Experience</a>
+        <a href="#resume" class="nav-link">Resume</a>
         <a href="#skills" class="nav-link">Skills</a>
-
-        <div class="mobile-resume">
-          <label class="sr-only" for="resumeSelectMobile">Select resume</label>
-          <select id="resumeSelectMobile" class="select"></select>
-          <a class="btn btn-ghost" id="resumeBtnMobile" href="#" download>Download</a>
-        </div>
       </div>
     </header>
 
@@ -62,12 +54,7 @@
       <section id="home" class="section hero">
         <div class="container hero-grid">
           <div class="hero-media reveal">
-            <img
-              class="profile-img"
-              src="assets/img/profile.jpg"
-              alt="Profile photo"
-              loading="lazy"
-            />
+            <img class="profile-img" src="assets/img/profile.jpg" alt="Profile photo" loading="lazy" />
           </div>
 
           <div class="hero-content reveal">
@@ -112,6 +99,40 @@
         </div>
       </section>
 
+      <!-- Resume -->
+      <section id="resume" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Resume</h2>
+            <p class="muted">
+              Select the resume version that best matches the role you are applying for.
+            </p>
+          </div>
+
+          <div class="card resume-card reveal">
+            <div class="card-body">
+              <div class="resume-controls">
+                <div class="resume-field">
+                  <label for="resumeSelectSection" class="label">Choose a resume</label>
+                  <select id="resumeSelectSection" class="select"></select>
+                </div>
+
+                <div class="resume-actions">
+                  <a class="btn" id="resumeDownloadSection" href="#" download>Download PDF</a>
+                  <a class="btn btn-ghost" id="resumeViewSection" href="#" target="_blank" rel="noreferrer"
+                    >View</a
+                  >
+                </div>
+              </div>
+
+              <div class="resume-hint muted" id="resumeHint">
+                Tip: use the MLOps resume for ML platform / deployment roles; DS resume for modeling + analytics roles.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Skills -->
       <section id="skills" class="section">
         <div class="container">
@@ -128,7 +149,7 @@
       <footer class="site-footer">
         <div class="container footer-inner">
           <p class="muted">© <span id="year"></span> <span id="footerName">Mu (Henry) Ha</span></p>
-          <a class="muted" href="#home">Back to top</a>
+          <a class="muted" href="#top">Back to top</a>
         </div>
       </footer>
     </main>

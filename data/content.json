@@ -7,22 +7,11 @@
     "linkedin": "https://www.linkedin.com/in/mu-henry-ha",
     "github": "https://github.com/henryha2019"
   },
-
   "resumes": [
-    {
-      "label": "MLOps / ML Engineer Resume",
-      "file": "assets/docs/resume-mlops.pdf"
-    },
-    {
-      "label": "Data Scientist Resume",
-      "file": "assets/docs/resume-ds.pdf"
-    },
-    {
-      "label": "Mechanical Systems Resume",
-      "file": "assets/docs/resume-me.pdf"
-    }
+    { "label": "MLOps / ML Engineer Resume", "file": "assets/docs/resume-mlops.pdf" },
+    { "label": "Data Scientist Resume", "file": "assets/docs/resume-ds.pdf" },
+    { "label": "Mechanical Systems Resume", "file": "assets/docs/resume-me.pdf" }
   ],
-
   "home": {
     "headline": "MLOps Engineer and Data Scientist building production-grade machine learning systems.",
     "about": [
@@ -31,13 +20,11 @@
       "I completed an intensive MLOps learning plan and focus on reliable, interpretable, scalable ML delivery."
     ]
   },
-
   "skills": {
     "core": ["Python", "SQL", "Statistics", "Machine Learning", "Time Series", "Computer Vision"],
     "mlops": ["AWS (EC2, S3, IAM)", "Docker", "CI/CD", "Model Monitoring", "Experiment Tracking", "Production Pipelines"],
     "tools": ["PyTorch", "scikit-learn", "Pandas", "NumPy", "TensorFlow", "Dash", "Git", "Linux"]
   },
-
   "work": [
     {
       "company": "Brilliant Automation",
@@ -70,7 +57,6 @@
       ]
     }
   ],
-
   "projects": [
     {
       "title": "Brilliant Automation",
