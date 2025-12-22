@@ -96,6 +96,29 @@ function renderProjects(projects) {
 
   (projects || []).forEach((p) => {
     const card = el("article", "card reveal");
+    if (p.cardLink) {
+      card.classList.add("card-clickable");
+      card.setAttribute("role", "link");
+      card.setAttribute("tabindex", "0");
+      card.setAttribute("aria-label", `Open ${p.title || "project"}`);
+
+      const open = () => window.open(p.cardLink, "_blank", "noreferrer");
+
+      card.addEventListener("click", (e) => {
+        // Don't hijack clicks on inner links/buttons
+        if (e.target.closest("a, button")) return;
+        open();
+      });
+
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          if (e.target.closest("a, button")) return;
+          e.preventDefault();
+          open();
+        }
+      });
+    }
+
     const img = el("img", "card-img", {
       src: p.image || "",
       alt: `${p.title} preview`,
@@ -112,6 +135,12 @@ function renderProjects(projects) {
       const ul = el("ul", "work-bullets");
       p.bullets.forEach((b) => ul.appendChild(el("li", "", { text: b })));
       body.appendChild(ul);
+    }
+    
+    if (p.tools && p.tools.length) {
+      const pills = el("div", "pills");
+      p.tools.forEach((t) => pills.appendChild(el("span", "pill", { text: t })));
+      body.appendChild(pills);
     }
 
     const actions = el("div", "card-actions");
