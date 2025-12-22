@@ -79,7 +79,7 @@
     {
       "title": "Data Science Resume",
       "tagline": "DS-focused version (projects, modeling, analytics).",
-      "image": "assets/img/projects/jobai.png",
+      "image": "assets/img/projects/ds.gif",
       "file": "assets/docs/resume-ds.pdf",
       "tags": ["Data Science", "ML", "Dash", "SQL"],
       "bullets": [
@@ -90,7 +90,7 @@
     {
       "title": "MLOps / Cloud Resume",
       "tagline": "Cloud + production delivery (AWS + automation + reliability).",
-      "image": "assets/img/projects/brilliant-automation.png",
+      "image": "assets/img/projects/mlops.gif",
       "file": "assets/docs/resume-mlops.pdf",
       "tags": ["MLOps", "AWS", "CI/CD", "Terraform"],
       "bullets": [
@@ -101,7 +101,7 @@
     {
       "title": "Mechanical Engineering Resume",
       "tagline": "ME-focused version (design, manufacturing, GD&T).",
-      "image": "assets/img/projects/brilliant-automation.png",
+      "image": "assets/img/projects/cloud.gif",
       "file": "assets/docs/resume-me.pdf",
       "tags": ["SolidWorks", "NX", "DFM/DFA", "GD&T"],
       "bullets": [
@@ -177,9 +177,10 @@
     {
       "title": "Machine Health Prediction & Monitoring Dashboard",
       "tagline": "Predictive maintenance system for industrial equipment using interpretable ML.",
-      "image": "assets/img/projects/brilliant-automation.png",
+      "image": "assets/img/projects/Dashboard.gif",
       "links": [
-        { "label": "GitHub", "url": "https://github.com/your-handle/brilliant-automation" }
+        { "label": "GitHub", "url": "https://github.com/henryha2019/capstone" },
+        { "label": "Slides", "url": "https://docs.google.com/presentation/d/1tsvjiBXDVXvVI7k3FpqnnCrjo5kDpW_P/edit?usp=sharing&ouid=117258495728912110739&rtpof=true&sd=true"}
       ],
       "bullets": [
         "Developed an end-to-end predictive maintenance system using real-world industrial sensor data.",
@@ -192,39 +193,14 @@
     {
       "title": "AI Wall Painting Robot – Wall Segmentation",
       "tagline": "Deep learning-based wall surface segmentation for robotic painting automation.",
-      "image": "assets/img/projects/jobai.png",
-      "links": [],
+      "image": "assets/img/projects/wall.png",
+      "links": [{ "label": "Notebook", "url": "https://colab.research.google.com/drive/1XS9LrNXd79Az8MSTh7UCIxch-4vpfc6e?usp=sharing" }],
       "bullets": [
         "Implemented a Pyramid Scene Parsing Network (PSPNet) for industrial wall segmentation.",
         "Designed an encoder–decoder architecture with a PPM-based decoder for pixel-wise classification.",
         "Evaluated multiple training strategies including transfer learning and end-to-end training.",
         "Achieved 92.13% accuracy and 72.58% IoU, enabling reliable automated wall-surface detection.",
         "Preprocessed data by flattening irregular wall segments, resizing images, and applying data augmentation."
-      ]
-    },
-    {
-      "title": "UWAFT Controls – Autonomous Vehicle Control System",
-      "tagline": "Control algorithms and sensor fusion for an autonomous vehicle simulation.",
-      "image": "assets/img/projects/brilliant-automation.png",
-      "links": [],
-      "bullets": [
-        "Designed and implemented vehicle control algorithms from scratch in Python and MATLAB.",
-        "Derived kinematic and dynamic models to support motion planning and control.",
-        "Designed and tuned control parameters for stability and responsiveness.",
-        "Implemented an Extended Kalman Filter (EKF) for multi-sensor fusion to improve state estimation accuracy."
-      ]
-    },
-    {
-      "title": "Robotic Manipulator & Pick-and-Place System",
-      "tagline": "Control, mechanical design, and hardware-in-the-loop validation of a robotic arm.",
-      "image": "assets/img/projects/brilliant-automation.png",
-      "links": [],
-      "bullets": [
-        "Designed and implemented a control system for a robotic arm and pick-and-place manipulator.",
-        "Addressed nonlinearities and coupling effects through controller design and trajectory optimization.",
-        "Developed manual and automated control modes for efficient and repeatable motion.",
-        "Designed and fabricated GD&T-compliant mechanical components and integrated sensors and actuators via Arduino.",
-        "Performed system identification, parameter tuning, hardware-in-the-loop testing, and root cause analysis."
       ]
     },
     {
@@ -265,18 +241,6 @@
         "Designing APIs to support automated job application workflows and downstream integrations.",
         "Emphasizing clean interfaces, extensibility, and production-ready architecture.",
         "Positioned for future features such as credit systems, automation pipelines, and scalable deployment."
-      ]
-    },
-    {
-      "title": "Machine Learning & Software Foundations",
-      "tagline": "Broad ML, deep learning, and software engineering experience across languages.",
-      "image": "assets/img/projects/brilliant-automation.png",
-      "links": [],
-      "bullets": [
-        "Hands-on experience with CNNs, RNNs, sequence models, regularization, hyperparameter tuning, and reinforcement learning.",
-        "Implemented systems for object detection, face verification, art style transfer, sentiment analysis, machine translation, and voice detection.",
-        "Developed a robotic system capable of recognizing and cleaning goose feces using computer vision.",
-        "Strong foundation in data structures and algorithms implemented in Python, MATLAB, C++, and C."
       ]
     }
   ]
