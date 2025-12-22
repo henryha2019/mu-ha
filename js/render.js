@@ -106,9 +106,13 @@ function renderProjects(projects) {
     body.appendChild(el("h3", "", { text: p.title || "Project" }));
     body.appendChild(el("p", "", { text: p.tagline || "" }));
 
-    const ul = el("ul", "work-bullets");
-    (p.bullets || []).forEach((b) => ul.appendChild(el("li", "", { text: b })));
-    body.appendChild(ul);
+    if (p.summary) {
+      body.appendChild(el("div", "work-summary", { text: p.summary }));
+    } else if (p.bullets && p.bullets.length) {
+      const ul = el("ul", "work-bullets");
+      p.bullets.forEach((b) => ul.appendChild(el("li", "", { text: b })));
+      body.appendChild(ul);
+    }
 
     const actions = el("div", "card-actions");
     (p.links || []).forEach((l) => {

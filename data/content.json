@@ -101,7 +101,7 @@
     {
       "title": "Mechanical Engineering Resume",
       "tagline": "ME-focused version (design, manufacturing, GD&T).",
-      "image": "assets/img/projects/cloud.gif",
+      "image": "assets/img/projects/me.gif",
       "file": "assets/docs/resume-me.pdf",
       "tags": ["SolidWorks", "NX", "DFM/DFA", "GD&T"],
       "bullets": [
@@ -188,7 +188,8 @@
         "Performed feature engineering and time-series modeling to forecast equipment health and potential failures.",
         "Designed and implemented an interactive Dash dashboard to visualize real-time health scores, historical trends, and maintenance alerts.",
         "Structured the system with deployment-readiness, reproducibility, and monitoring in mind."
-      ]
+      ],
+      "summary": "End-to-end predictive maintenance system built on real-world industrial sensor data, combining interpretable machine learning, time-series feature engineering, and deployment-ready workflows. The project delivers real-time equipment health scoring, failure forecasting, and operational visibility through an interactive Dash dashboard, with a strong emphasis on reproducibility and monitoring."
     },
     {
       "title": "AI Wall Painting Robot – Wall Segmentation",
@@ -201,24 +202,26 @@
         "Evaluated multiple training strategies including transfer learning and end-to-end training.",
         "Achieved 92.13% accuracy and 72.58% IoU, enabling reliable automated wall-surface detection.",
         "Preprocessed data by flattening irregular wall segments, resizing images, and applying data augmentation."
-      ]
+      ],
+      "summary": "Deep learning–based wall surface segmentation system for robotic painting automation, using a PSPNet encoder–decoder architecture with pyramid pooling. The model achieves high accuracy and IoU through careful data preprocessing, augmentation, and training strategy evaluation, enabling reliable pixel-level wall detection in industrial environments."
     },
     {
       "title": "Time Series Forecasting for TSLA Stock Prices",
       "tagline": "Deep learning-based financial time series forecasting using attention models.",
-      "image": "assets/img/projects/jobai.png",
+      "image": "assets/img/projects/ts.gif",
       "links": [],
       "bullets": [
         "Implemented a Temporal Fusion Transformer to model and forecast Tesla (TSLA) stock prices.",
         "Performed hyperparameter tuning across input window size, attention dropout, and learning rate schedules.",
         "Evaluated model performance using MSE, RMSE, R², and explained variance.",
         "Demonstrated applied use of sequence models on real-world financial data."
-      ]
+      ],
+      "summary": "Applied deep learning time-series forecasting using a Temporal Fusion Transformer to model Tesla stock prices. The project explores attention-based sequence modeling, systematic hyperparameter tuning, and rigorous evaluation metrics to demonstrate practical forecasting on real-world financial data."
     },
     {
       "title": "ML Guard (In Progress)",
       "tagline": "Lightweight MLOps monitoring and cloud cost guard for small ML teams.",
-      "image": "assets/img/projects/brilliant-automation.png",
+      "image": "assets/img/projects/guard.gif",
       "links": [
         { "label": "GitHub (WIP)", "url": "https://github.com/your-handle/ml-guard" }
       ],
@@ -227,12 +230,13 @@
         "Focused on production signals such as feature statistics, prediction distributions, and operational alerts.",
         "Integrating AWS Cost Explorer to attribute cloud spend at the model or service level.",
         "Built with a deliberate MVP scope to avoid over-engineering while preserving production realism."
-      ]
+      ],
+      "summary": "Lightweight MLOps monitoring and cloud cost guard designed for small ML teams, focused on production-critical signals such as data drift, prediction distributions, inference latency, and cost attribution. Built with a deliberate MVP scope to balance operational realism with minimal infrastructure overhead."
     },
     {
       "title": "JobAI - AI Job Application Assistant (In Progress)",
       "tagline": "Backend-first AI system for resume parsing and automated job application workflows.",
-      "image": "assets/img/projects/jobai.png",
+      "image": "assets/img/projects/jobai.gif",
       "links": [
         { "label": "GitHub (WIP)", "url": "https://github.com/your-handle/jobai" }
       ],
@@ -241,7 +245,8 @@
         "Designing APIs to support automated job application workflows and downstream integrations.",
         "Emphasizing clean interfaces, extensibility, and production-ready architecture.",
         "Positioned for future features such as credit systems, automation pipelines, and scalable deployment."
-      ]
+      ],
+      "summary": "JobAI is a FastAPI-based backend focused on structured resume parsing and automated job application workflows, designed with clean APIs, extensibility, and production readiness in mind. The system is built to support future automation pipelines, credit-based features, and scalable deployment."
     }
   ]
 }
