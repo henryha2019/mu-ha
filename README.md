@@ -1,5 +1,5 @@
 
-# Mu (Henry) Ha — Data Scientist Portfolio
+# Mu (Henry) Ha — Portfolio
 
 **Data Scientist | MLOps-oriented | Industrial ML & Applied AI**
 📍 Vancouver, BC
