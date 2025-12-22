@@ -3,7 +3,7 @@
 
 **Data Scientist | MLOps-oriented | Industrial ML & Applied AI**
 📍 Vancouver, BC
-🔗 [LinkedIn](https://linkedin.com/in/your-handle) · [GitHub](https://github.com/your-handle)
+🔗 [LinkedIn](https://www.linkedin.com/in/mu-henry-ha) · [GitHub](https://github.com/henryha2019)
 📄 Resume available on the website
 
 ---
