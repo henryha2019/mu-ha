@@ -175,6 +175,46 @@
   ],
   "projects": [
     {
+      "title": "Production-Grade MLOps System for Stock Price Forecasting",
+      "tagline": "Registry-driven ML deployment with AutoML and transformer-based models on AWS.",
+      "image": "assets/img/projects/ts.gif",
+      "cardLink": "https://github.com/henryha2019/stock-price-predictor",
+      "links": [
+      ],
+      "bullets": [
+        "Built a production-ready MLOps system enabling reliable training, promotion, and serving of time-series forecasting models across local and AWS environments.",
+        "Integrated multiple model families—including classical baselines, AutoML (FLAML), and transformer-based models from Hugging Face—under a single MLflow registry and serving interface.",
+        "Implemented registry-backed model promotion with explicit aliasing (\u2018@prod\u2019) to decouple experimentation from production inference.",
+        "Deployed a containerized FastAPI inference service on AWS ECS behind an Application Load Balancer, validated through live end-to-end prediction requests."
+      ],
+      "tools": [
+        "Python",
+        "MLflow",
+        "FastAPI",
+        "Docker",
+        "AWS (ECS, ALB, S3, EC2)",
+        "Terraform",
+        "GitHub Actions",
+        "Hugging Face Transformers",
+        "AutoML (FLAML)"
+      ],
+      "summary": "Designed and deployed a production-grade MLOps system for time-series forecasting that supports multiple modeling approaches, including AutoML and transformer-based models from Hugging Face. The project emphasizes operational correctness through registry-driven model promotion, reproducible training, and live cloud inference on AWS, demonstrating end-to-end ownership from experimentation to production serving."
+    },
+    {
+      "title": "Time Series Forecasting for TSLA Stock Prices",
+      "tagline": "Applied deep learning for attention-based financial time-series forecasting.",
+      "image": "assets/img/projects/ts.gif",
+      "cardLink": "https://github.com/henryha2019/stock-price-predictor",
+      "links": [],
+      "bullets": [
+        "Built an attention-based time-series forecasting model to learn temporal patterns in real-world equity price data.",
+        "Demonstrated the practical use of sequence models for noisy, non-stationary financial time series.",
+        "Evaluated forecasting quality using multiple regression metrics to assess stability and generalization."
+      ],
+      "tools": ["Python", "Deep Learning", "Time Series", "Temporal Fusion Transformer"],
+      "summary": "Applied an attention-based deep learning model to forecast Tesla (TSLA) stock prices, focusing on learning temporal dependencies in noisy financial time series. The project emphasizes practical modeling considerations, evaluation rigor, and the strengths and limitations of deep sequence models in real-world forecasting tasks."
+    },
+    {
       "title": "Machine Health Prediction & Monitoring Dashboard",
       "tagline": "Predictive maintenance system for industrial equipment using interpretable ML.",
       "image": "assets/img/projects/Dashboard.gif",
@@ -206,21 +246,6 @@
       ],
       "tools": ["PyTorch", "PSPNet", "Computer Vision", "CNN", "Robotics"],
       "summary": "Deep learning–based wall surface segmentation system for robotic painting automation, using a PSPNet encoder–decoder architecture with pyramid pooling. The model achieves high accuracy and IoU through careful data preprocessing, augmentation, and training strategy evaluation, enabling reliable pixel-level wall detection in industrial environments."
-    },
-    {
-      "title": "Time Series Forecasting for TSLA Stock Prices",
-      "tagline": "Deep learning-based financial time series forecasting using attention models.",
-      "image": "assets/img/projects/ts.gif",
-      "cardLink": "",
-      "links": [],
-      "bullets": [
-        "Implemented a Temporal Fusion Transformer to model and forecast Tesla (TSLA) stock prices.",
-        "Performed hyperparameter tuning across input window size, attention dropout, and learning rate schedules.",
-        "Evaluated model performance using MSE, RMSE, R², and explained variance.",
-        "Demonstrated applied use of sequence models on real-world financial data."
-      ],
-      "tools": ["Python", "Time Series", "Deep Learning", "Temporal Fusion Transformer"],
-      "summary": "Applied deep learning time-series forecasting using a Temporal Fusion Transformer to model Tesla stock prices. The project explores attention-based sequence modeling, systematic hyperparameter tuning, and rigorous evaluation metrics to demonstrate practical forecasting on real-world financial data."
     },
     {
       "title": "ML Guard (In Progress)",
