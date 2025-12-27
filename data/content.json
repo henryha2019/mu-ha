@@ -201,20 +201,6 @@
       "summary": "Designed and deployed a production-grade MLOps system for time-series forecasting that supports multiple modeling approaches, including AutoML and transformer-based models from Hugging Face. The project emphasizes operational correctness through registry-driven model promotion, reproducible training, and live cloud inference on AWS, demonstrating end-to-end ownership from experimentation to production serving."
     },
     {
-      "title": "Time Series Forecasting for TSLA Stock Prices",
-      "tagline": "Applied deep learning for attention-based financial time-series forecasting.",
-      "image": "assets/img/projects/ts.gif",
-      "cardLink": "https://github.com/henryha2019/stock-price-predictor",
-      "links": [],
-      "bullets": [
-        "Built an attention-based time-series forecasting model to learn temporal patterns in real-world equity price data.",
-        "Demonstrated the practical use of sequence models for noisy, non-stationary financial time series.",
-        "Evaluated forecasting quality using multiple regression metrics to assess stability and generalization."
-      ],
-      "tools": ["Python", "Deep Learning", "Time Series", "Temporal Fusion Transformer"],
-      "summary": "Applied an attention-based deep learning model to forecast Tesla (TSLA) stock prices, focusing on learning temporal dependencies in noisy financial time series. The project emphasizes practical modeling considerations, evaluation rigor, and the strengths and limitations of deep sequence models in real-world forecasting tasks."
-    },
-    {
       "title": "Machine Health Prediction & Monitoring Dashboard",
       "tagline": "Predictive maintenance system for industrial equipment using interpretable ML.",
       "image": "assets/img/projects/Dashboard.gif",
