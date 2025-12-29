@@ -176,20 +176,18 @@
   "projects": [
     {
       "title": "ML Guard",
-      "tagline": "Lightweight ML monitoring and cloud cost guard.",
+      "tagline": "Lightweight ML monitoring and cost guard with explicit drift detection.",
       "image": "assets/img/projects/guard.gif",
-      "cardLink": "",
-      "links": [
-        { "label": "GitHub", "url": "https://github.com/henryha2019/ml-guard" }
-      ],
+      "cardLink": "https://github.com/henryha2019/ml-guard",
+      "links": [ ],
       "bullets": [
         "Built a lightweight ML monitoring service to track inference latency, prediction distributions, feature statistics, and data drift from a single event stream.",
         "Implemented baseline-driven drift detection (PSI for numeric, frequency divergence for categorical) with timezone-aware daily aggregation.",
         "Added Slack-based alerting for drift and operational regressions via a background worker architecture.",
         "Integrated AWS Cost Explorer (best-effort) to enable per-project cost visibility without coupling core monitoring to cloud credentials."
       ],
-      "tools": ["FastAPI", "PostgreSQL", "Docker", "AWS", "MLOps", "Monitoring"],
-      "summary": "ML Guard is a minimal, production-grade monitoring system for ML inference pipelines. It derives latency metrics, prediction statistics, feature drift signals, and AWS cost attribution from a single stream of inference events, prioritizing actionable signals and low operational overhead."
+      "tools": ["Python", "FastAPI", "PostgreSQL", "Docker", "Streamlit", "Slack API", "AWS", "MLOps", "Monitoring"],
+      "summary": "ML Guard is a lightweight monitoring and observability system for ML inference pipelines. It computes latency metrics, prediction statistics, feature distributions, and baseline-driven drift signals from a single event stream, with optional AWS cost attribution and Slack alerting. The system prioritizes production correctness, low operational overhead, and clear monitoring signals over platform complexity.",
     },
     {
       "title": "Production-Grade MLOps System for Stock Price Forecasting",
