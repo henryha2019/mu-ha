@@ -175,6 +175,23 @@
   ],
   "projects": [
     {
+      "title": "ML Guard",
+      "tagline": "Lightweight ML monitoring and cloud cost guard.",
+      "image": "assets/img/projects/guard.gif",
+      "cardLink": "",
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/henryha2019/ml-guard" }
+      ],
+      "bullets": [
+        "Built a lightweight ML monitoring service to track inference latency, prediction distributions, feature statistics, and data drift from a single event stream.",
+        "Implemented baseline-driven drift detection (PSI for numeric, frequency divergence for categorical) with timezone-aware daily aggregation.",
+        "Added Slack-based alerting for drift and operational regressions via a background worker architecture.",
+        "Integrated AWS Cost Explorer (best-effort) to enable per-project cost visibility without coupling core monitoring to cloud credentials."
+      ],
+      "tools": ["FastAPI", "PostgreSQL", "Docker", "AWS", "MLOps", "Monitoring"],
+      "summary": "ML Guard is a minimal, production-grade monitoring system for ML inference pipelines. It derives latency metrics, prediction statistics, feature drift signals, and AWS cost attribution from a single stream of inference events, prioritizing actionable signals and low operational overhead."
+    },
+    {
       "title": "Production-Grade MLOps System for Stock Price Forecasting",
       "tagline": "Registry-driven ML deployment with AutoML and transformer-based models on AWS.",
       "image": "assets/img/projects/ts.gif",
@@ -232,23 +249,6 @@
       ],
       "tools": ["PyTorch", "PSPNet", "Computer Vision", "CNN", "Robotics"],
       "summary": "Deep learning–based wall surface segmentation system for robotic painting automation, using a PSPNet encoder–decoder architecture with pyramid pooling. The model achieves high accuracy and IoU through careful data preprocessing, augmentation, and training strategy evaluation, enabling reliable pixel-level wall detection in industrial environments."
-    },
-    {
-      "title": "ML Guard (In Progress)",
-      "tagline": "Lightweight MLOps monitoring and cloud cost guard for small ML teams.",
-      "image": "assets/img/projects/guard.gif",
-      "cardLink": "",
-      "links": [
-        { "label": "GitHub (WIP)", "url": "https://github.com/your-handle/ml-guard" }
-      ],
-      "bullets": [
-        "Designing a minimal MLOps service to monitor model health, data drift, inference latency, and cloud costs.",
-        "Focused on production signals such as feature statistics, prediction distributions, and operational alerts.",
-        "Integrating AWS Cost Explorer to attribute cloud spend at the model or service level.",
-        "Built with a deliberate MVP scope to avoid over-engineering while preserving production realism."
-      ],
-      "tools": ["FastAPI", "AWS", "MLOps", "Monitoring", "Cost Optimization"],
-      "summary": "Lightweight MLOps monitoring and cloud cost guard designed for small ML teams, focused on production-critical signals such as data drift, prediction distributions, inference latency, and cost attribution. Built with a deliberate MVP scope to balance operational realism with minimal infrastructure overhead."
     },
     {
       "title": "JobAI - AI Job Application Assistant (In Progress)",
