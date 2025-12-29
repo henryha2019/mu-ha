@@ -187,7 +187,7 @@
         "Integrated AWS Cost Explorer (best-effort) to enable per-project cost visibility without coupling core monitoring to cloud credentials."
       ],
       "tools": ["Python", "FastAPI", "PostgreSQL", "Docker", "Streamlit", "Slack API", "AWS", "MLOps", "Monitoring"],
-      "summary": "ML Guard is a lightweight monitoring and observability system for ML inference pipelines. It computes latency metrics, prediction statistics, feature distributions, and baseline-driven drift signals from a single event stream, with optional AWS cost attribution and Slack alerting. The system prioritizes production correctness, low operational overhead, and clear monitoring signals over platform complexity.",
+      "summary": "ML Guard is a lightweight monitoring and observability system for ML inference pipelines. It computes latency metrics, prediction statistics, feature distributions, and baseline-driven drift signals from a single event stream, with optional AWS cost attribution and Slack alerting. The system prioritizes production correctness, low operational overhead, and clear monitoring signals over platform complexity."
     },
     {
       "title": "Production-Grade MLOps System for Stock Price Forecasting",
