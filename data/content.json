@@ -175,6 +175,30 @@
   ],
   "projects": [
     {
+      "title": "Time-Series Forecasting with Temporal Fusion Transformer (TFT)",
+      "tagline": "Multi-horizon stock price forecasting with interpretable transformer models.",
+      "image": "assets/img/projects/ts.gif",
+      "cardLink": "https://github.com/henryha2019/tesla-tft-forecasting",
+      "links": [],
+      "bullets": [
+        "Applied a Temporal Fusion Transformer (TFT) to model and forecast Tesla stock prices using historical market data, producing probabilistic multi-horizon forecasts.",
+        "Engineered time-based and rolling statistical features, and structured inputs into static, known, and unknown variables to align with TFT’s architecture.",
+        "Evaluated model performance against a naive persistence baseline using expanding-window cross-validation, reporting RMSE, MAE, and R² across forecast horizons.",
+        "Analyzed model interpretability through variable importance and attention weights to understand which features and historical timesteps most influenced predictions."
+      ],
+      "tools": [
+        "Python",
+        "PyTorch",
+        "PyTorch Forecasting",
+        "Temporal Fusion Transformer (TFT)",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Scikit-learn"
+      ],
+      "summary": "Developed an interpretable time-series forecasting pipeline using Temporal Fusion Transformer (TFT) to predict Tesla stock prices over multiple future horizons. The project emphasizes rigorous time-series validation, baseline comparison, and model interpretability, demonstrating a data-science–driven approach to transformer-based forecasting."
+    },
+    {
       "title": "ML Guard",
       "tagline": "Lightweight ML monitoring and cost guard with explicit drift detection.",
       "image": "assets/img/projects/guard.gif",
@@ -192,7 +216,7 @@
     {
       "title": "Production-Grade MLOps System for Stock Price Forecasting",
       "tagline": "Registry-driven ML deployment with AutoML and transformer-based models on AWS.",
-      "image": "assets/img/projects/ts.gif",
+      "image": "assets/img/projects/mlops_sys.gif",
       "cardLink": "https://github.com/henryha2019/stock-price-predictor",
       "links": [
       ],
