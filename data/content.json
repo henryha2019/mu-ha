@@ -8,12 +8,12 @@
     "github": "https://github.com/henryha2019"
   },
   "home": {
-    "headline": "Data Scientist specializing in MLOps",
-    "about": [
-      "I am a Data Scientist with a strong MLOps and cloud foundation, focused on building production-ready machine learning systems rather than standalone models.",
-      "My work spans the full ML lifecycle: data ingestion, feature engineering, model development, deployment, monitoring, and iteration. I recently led the development of an industrial predictive-maintenance system, combining interpretable ML models with a real-time monitoring dashboard to support operational decision-making in manufacturing environments.",
-      "I am particularly interested in the reliability and scalability of ML systems. My recent training and hands-on work emphasize Docker, Kubernetes, Linux, GitHub Actions, Terraform (Infrastructure as Code), and AWS, enabling reproducible pipelines, automated deployments, and maintainable cloud infrastructure.",
-      "With a background that bridges mechanical engineering and data science, I bring a systems-level mindset to ML problems—grounding models in physical intuition, operational constraints, and real-world impact. I aim to build ML products that are not only accurate, but deployable, observable, and trusted by end users."
+  "headline": "Automation Engineer specializing in Manufacturing Systems & Controls",
+  "about": [
+    "I am an Automation Engineer focused on designing and deploying production-ready manufacturing systems rather than standalone prototypes.",
+    "My work spans the full automation lifecycle: requirements definition, hardware-software integration, PLC/control logic development, system validation, fault handling, and performance monitoring. I recently led the development of an industrial monitoring and predictive-maintenance system, integrating sensor data pipelines, structured test plans, and real-time dashboards to support operational decision-making in manufacturing environments.",
+    "I am particularly interested in system reliability, validation rigor, and production scalability. My recent hands-on work emphasizes structured test frameworks, fault injection, yield analytics (FPY/FTY), Dockerized environments, CI/CD workflows, and infrastructure automation, enabling reproducible builds and deterministic validation pipelines.",
+    "With a background bridging mechanical engineering and data science, I bring a systems-level mindset to automation challenges—grounding control strategies and analytics in physical constraints, hardware behavior, and real-world manufacturing conditions. I aim to build automation systems that are robust, diagnosable, scalable, and trusted on the factory floor."
     ],
     "badges": [
       "AWS Cloud Practitioner",
