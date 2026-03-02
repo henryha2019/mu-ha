@@ -1,19 +1,19 @@
 {
   "meta": {
     "name": "Mu (Henry) Ha",
-    "role": "Data Scientist / MLOps",
+    "role": "Mechanical Engineer / Manufacturing & Automation",
     "location": "Surrey, BC (Vancouver Metro)",
     "email": "m8ha@uwaterloo.ca",
     "linkedin": "https://www.linkedin.com/in/mu-henry-ha",
     "github": "https://github.com/henryha2019"
   },
   "home": {
-  "headline": "Automation Engineer specializing in Manufacturing Systems & Controls",
+  "headline": "Mechanical Engineer specializing in Manufacturing Systems & Automation",
   "about": [
-    "I am an Automation Engineer focused on designing and deploying production-ready manufacturing systems rather than standalone prototypes.",
-    "My work spans the full automation lifecycle: requirements definition, hardware-software integration, PLC/control logic development, system validation, fault handling, and performance monitoring. I recently led the development of an industrial monitoring and predictive-maintenance system, integrating sensor data pipelines, structured test plans, and real-time dashboards to support operational decision-making in manufacturing environments.",
-    "I am particularly interested in system reliability, validation rigor, and production scalability. My recent hands-on work emphasizes structured test frameworks, fault injection, yield analytics (FPY/FTY), Dockerized environments, CI/CD workflows, and infrastructure automation, enabling reproducible builds and deterministic validation pipelines.",
-    "With a background bridging mechanical engineering and data science, I bring a systems-level mindset to automation challenges—grounding control strategies and analytics in physical constraints, hardware behavior, and real-world manufacturing conditions. I aim to build automation systems that are robust, diagnosable, scalable, and trusted on the factory floor."
+    "I am a Mechanical Engineer with hands-on experience across the full manufacturing lifecycle—from design and tolerance analysis to validation testing, quality systems, and production monitoring.",
+    "My manufacturing background includes mechanical assembly design with GD&T, production cost estimation and SAP BOM/routings, mechanical validation testing (gasket compression, deformation), root cause analysis, and compliance with quality standards. I approach engineering problems from first principles, grounding decisions in physical constraints, hardware behavior, and real manufacturing requirements.",
+    "I complement this foundation with automation and data skills: sensor data pipelines, PLC and Arduino-based control systems, test automation frameworks, and yield analytics (FPY/FTY). My recent work includes building a TCP/IP-based DUT simulator and structured test platform with fault injection, CI-enabled validation pipelines, and auto-generated qualification reports.",
+    "With a B.Sc. in Mechanical Engineering from Waterloo (AI Option, Co-op) and a Master of Data Science from UBC, I bring a cross-disciplinary perspective to manufacturing and automation challenges—building systems that are reliable, diagnosable, and trusted on the factory floor."
     ],
     "badges": [
       "AWS Cloud Practitioner",
@@ -187,7 +187,7 @@
       "title": "Manufacturing Test Automation Platform",
       "tagline": "Dockerized test framework with yield analytics and fault injection for manufacturing validation.",
       "image": "assets/img/projects/mtap.gif",
-      "cardLink": "",
+      "cardLink": "https://github.com/henryha2019/mtap",
       "links": [],
       "bullets": [
         "Developed a TCP/IP-based DUT simulator to emulate manufacturing test communication, control, and faults.",
