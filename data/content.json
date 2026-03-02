@@ -46,33 +46,45 @@
   ],
   "skills": {
     "core": [
-      "Python",
-      "SQL",
-      "Pandas",
-      "NumPy",
-      "scikit-learn",
-      "PyTorch",
-      "Statistics",
-      "Experimentation"
+      "DFM/DFA",
+      "GD&T",
+      "Tolerance Analysis",
+      "SAP BOM & Routings",
+      "Quality Control",
+      "SPC (Cp/Cpk)",
+      "Yield Analysis",
+      "Lean Manufacturing",
+      "Test Plan Development",
+      "Root Cause Analysis"
     ],
     "mlops": [
-      "Docker",
-      "Kubernetes",
-      "Linux",
-      "GitHub Actions",
-      "Terraform (IaC)",
-      "AWS (EC2/S3/IAM)",
-      "Model Monitoring",
-      "Reproducible Pipelines"
+      "Python",
+      "SQL",
+      "Bash/Shell",
+      "C/C++",
+      "REST APIs",
+      "TCP/IP",
+      "AWS",
+      "PostgreSQL",
+      "Pandas",
+      "Plotly",
+      "Simulink",
+      "Arduino",
+      "PLCs",
+      "Sensor Integration",
+      "Dynamic Modeling",
+      "PID",
+      "Sensor Fusion"
     ],
     "tools": [
-      "Git",
-      "PostgreSQL",
-      "FastAPI",
-      "Dash/Plotly",
+      "MATLAB",
+      "SolidWorks",
+      "Siemens NX",
+      "AutoCAD",
+      "ANSYS",
+      "Git/GitHub",
       "CI/CD",
-      "Data Visualization",
-      "Feature Engineering"
+      "Docker"
     ]
   },
   "resumes": [
@@ -112,16 +124,14 @@
   ],
   "work": [
     {
-      "company": "Brilliant Automation (UBC MDS Capstone)",
-      "title": "Data Scientist / Mechanical Systems Engineer",
+      "company": "Brilliant Automation (Capstone)",
+      "title": "Systems Engineer",
       "dates": "Apr 2025 – Jun 2025",
-      "subtitle": "Predictive maintenance and automation for industrial equipment.",
+      "subtitle": "Sensor data validation and monitoring for industrial equipment.",
       "highlights": [
-        "Developed an end-to-end predictive maintenance system to monitor the health of industrial machines using sensor data.",
-        "Built and trained machine learning models (Ridge, Random Forest, LSTM) to forecast potential failures, balancing accuracy with interpretability for operational use.",
-        "Designed feature engineering and time-series modeling workflows to support health scoring and failure prediction.",
-        "Created an interactive dashboard using Dash to visualize real-time machine health scores, historical trends, and maintenance alerts for operations teams.",
-        "Applied systems engineering principles and lean manufacturing concepts to streamline data workflows and improve system reliability."
+        "Built a sensor data validation pipeline processing multi-rate telemetry and waveform inputs to generate interpretable health scores across 12 machine metrics for production monitoring.",
+        "Implemented leakage-free expanding-window CV (5 splits, N=3,045) with structured OOF evaluation, achieving R²=0.39 vs. negative baseline to ensure test results reflect true deployment performance.",
+        "Deployed monitoring dashboards to track performance metrics, anomaly trends, and qualification auditability."
       ]
     },
     {
@@ -148,32 +158,62 @@
       ]
     },
     {
-      "company": "The Weir Group",
+      "company": "Weir Minerals (Internship)",
       "title": "Manufacturing Engineer",
       "dates": "Sep 2019 – Apr 2020",
-      "subtitle": "Production cost estimation, testing, and process optimization.",
+      "subtitle": "Production cost estimation, validation testing, and process optimization.",
       "highlights": [
-        "Computed production costs for 10+ products and created Bills of Materials (BOMs) and routings in SAP to support manufacturing and supply chain planning.",
-        "Conducted mechanical testing and quality control activities, including gasket compression tests, deformation analysis, and root cause analysis for design deviations.",
-        "Re-engineered and optimized the cost-estimation spreadsheet, improving calculation efficiency by approximately 30–40%.",
-        "Ensured compliance with safety standards and manufacturing best practices while supporting production operations."
+        "Estimated production costs and created BOMs & routings in SAP to support production planning and control.",
+        "Conducted mechanical validation testing (gasket compression, deformation) and led root cause investigations to resolve quality deviations and ensure spec compliance.",
+        "Improved cost estimation workflow by ~30% through data standardization, enhancing traceability & planning.",
+        "Ensured compliance with manufacturing quality standards and supported validation documentation."
       ]
     },
     {
-      "company": "The Weir Group",
+      "company": "Weir Minerals (Internship)",
       "title": "Design Engineer",
       "dates": "Jan 2019 – Apr 2019",
       "subtitle": "Mechanical design and engineering documentation for industrial systems.",
       "highlights": [
-        "Designed and modeled a circular manifold for a chemical plant and retrofitted multiple spool systems for client projects.",
-        "Generated over 100 professional 3D models and 2D engineering drawings using Siemens NX and SolidWorks, including GD&T annotations.",
-        "Worked in a fast-paced environment, producing 30+ detailed drawings per day to meet project deadlines.",
-        "Coordinated with production and fabrication teams to support design-for-manufacturing (DFM) and design-for-assembly (DFA).",
-        "Performed design verification tasks including material selection, seal geometry review, and basic stress checks to ensure compliance with client and industry requirements."
+        "Designed mechanical assemblies with GD&T to ensure manufacturability and tolerance robustness.",
+        "Collaborated with fabrication teams to resolve tolerance stack-ups and support production validation.",
+        "Performed design verification including material selection, seal geometry checks, and stress validation.",
+        "Generated controlled engineering drawings and documentation to support manufacturing releases."
       ]
     }
   ],
   "projects": [
+    {
+      "title": "Manufacturing Test Automation Platform",
+      "tagline": "Dockerized test framework with yield analytics and fault injection for manufacturing validation.",
+      "image": "assets/img/projects/mtap.gif",
+      "cardLink": "",
+      "links": [],
+      "bullets": [
+        "Developed a TCP/IP-based DUT simulator to emulate manufacturing test communication, control, and faults.",
+        "Designed structured acceptance and qualification test plans with defined coverage mapping, retry logic, and step-level validation criteria tied to product requirements.",
+        "Implemented an automated test framework supporting multi-SN execution, structured JSON logging, fault injection (timeouts, drift, intermittent failure), and traceable result storage.",
+        "Built yield analytics modules (FPY, FTY, Pareto, stratification) and deployed a Dockerized, CI-enabled validation pipeline with auto-generated qualification reports."
+      ],
+      "tools": ["Python", "TCP/IP", "Docker", "CI/CD", "JSON", "Yield Analytics", "FPY/FTY", "Test Automation"],
+      "summary": "End-to-end manufacturing test automation platform featuring a TCP/IP-based DUT simulator, structured acceptance and qualification test plans, fault injection, and yield analytics. The system produces traceable structured logs and auto-generated qualification reports through a Dockerized, CI-enabled validation pipeline."
+    },
+    {
+      "title": "Robotic Manipulator System",
+      "tagline": "Hardware-in-the-loop validation system for closed-loop robotic control and trajectory testing.",
+      "image": "assets/img/projects/arm.gif",
+      "cardLink": "",
+      "links": [],
+      "bullets": [
+        "Integrated motors, sensors, and Arduino control for closed loop hardware validation testing.",
+        "Developed manual and automated control modes to validate trajectory accuracy and repeatability.",
+        "Performed system identification and parameter tuning to resolve instability and coupling effects.",
+        "Executed structured troubleshooting and root cause analysis to improve control robustness.",
+        "Validated performance under varying load and motion profiles to ensure stable operation."
+      ],
+      "tools": ["Arduino", "C/C++", "PID Control", "Sensor Integration", "System Identification", "Hardware Validation"],
+      "summary": "Closed-loop robotic manipulator system integrating motors, sensors, and Arduino-based control for hardware validation. The project covers manual and automated control modes, system identification, parameter tuning, and structured root cause analysis to ensure trajectory accuracy and stable operation under varied conditions."
+    },
     {
       "title": "Time-Series Forecasting with Temporal Fusion Transformer (TFT)",
       "tagline": "Multi-horizon stock price forecasting with interpretable transformer models.",
