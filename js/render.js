@@ -293,8 +293,8 @@ function renderSkills(skills) {
   grid.innerHTML = "";
 
   const groups = [
-    { title: "Core", items: skills.core || [] },
-    { title: "MLOps & Cloud", items: skills.mlops || [] },
+    { title: "ML & Systems", items: skills.ml_systems || skills.mlops || [] },
+    { title: "Manufacturing & Controls", items: skills.manufacturing || skills.core || [] },
     { title: "Tools", items: skills.tools || [] }
   ];
 

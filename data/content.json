@@ -1,19 +1,19 @@
 {
   "meta": {
     "name": "Mu (Henry) Ha",
-    "role": "Mechanical Engineer / Manufacturing & Automation",
+    "role": "ML Engineer · Manufacturing & Physical Systems",
     "location": "Surrey, BC (Vancouver Metro)",
     "email": "m8ha@uwaterloo.ca",
     "linkedin": "https://www.linkedin.com/in/mu-henry-ha",
     "github": "https://github.com/henryha2019"
   },
   "home": {
-  "headline": "Mechanical Engineer specializing in Manufacturing Systems & Automation",
+  "headline": "ML Engineer with Deep Roots in Manufacturing & Physical Systems",
   "about": [
-    "I am a Mechanical Engineer with hands-on experience across the full manufacturing lifecycle—from design and tolerance analysis to validation testing, quality systems, and production monitoring.",
-    "My manufacturing background includes mechanical assembly design with GD&T, production cost estimation and SAP BOM/routings, mechanical validation testing (gasket compression, deformation), root cause analysis, and compliance with quality standards. I approach engineering problems from first principles, grounding decisions in physical constraints, hardware behavior, and real manufacturing requirements.",
-    "I complement this foundation with automation and data skills: sensor data pipelines, PLC and Arduino-based control systems, test automation frameworks, and yield analytics (FPY/FTY). My recent work includes building a TCP/IP-based DUT simulator and structured test platform with fault injection, CI-enabled validation pipelines, and auto-generated qualification reports.",
-    "With a B.Sc. in Mechanical Engineering from Waterloo (AI Option, Co-op) and a Master of Data Science from UBC, I bring a cross-disciplinary perspective to manufacturing and automation challenges—building systems that are reliable, diagnosable, and trusted on the factory floor."
+    "I build production ML systems with a foundation that most ML engineers don't have: real manufacturing experience. My background spans the full engineering lifecycle—mechanical design with GD&T, production cost estimation, validation testing, and quality systems—giving me first-principles intuition for the hardware and processes that ML models are ultimately deployed against.",
+    "On the ML side, I design and ship end-to-end systems: drift detection pipelines, registry-driven model promotion, containerized inference services on AWS, and structured test frameworks with fault injection and CI-enabled validation. I think carefully about leakage, reproducibility, and what it means for a model to be production-ready—not just accurate on a holdout set.",
+    "This combination lets me move fluently between the data and the physical world—understanding sensor behavior, failure modes, and manufacturing constraints at the level of depth that produces better features, better models, and systems that are actually trusted on the factory floor.",
+    "B.Sc. in Mechanical Engineering from Waterloo (AI Option, Co-op) · Master of Data Science from UBC."
     ],
     "badges": [
       "AWS Cloud Practitioner",
@@ -45,49 +45,64 @@
     }
   ],
   "skills": {
-    "core": [
+    "ml_systems": [
+      "Python",
+      "SQL",
+      "FastAPI",
+      "Docker",
+      "MLflow",
+      "AWS (ECS, S3, EC2, ALB)",
+      "Terraform",
+      "GitHub Actions",
+      "PostgreSQL",
+      "Pandas",
+      "scikit-learn",
+      "PyTorch",
+      "Drift Detection (PSI)",
+      "REST APIs",
+      "TCP/IP",
+      "CI/CD",
+      "Bash/Shell"
+    ],
+    "manufacturing": [
       "DFM/DFA",
       "GD&T",
       "Tolerance Analysis",
       "SAP BOM & Routings",
       "Quality Control",
       "SPC (Cp/Cpk)",
-      "Yield Analysis",
+      "Yield Analysis (FPY/FTY)",
       "Lean Manufacturing",
       "Test Plan Development",
-      "Root Cause Analysis"
-    ],
-    "mlops": [
-      "Python",
-      "SQL",
-      "Bash/Shell",
-      "C/C++",
-      "REST APIs",
-      "TCP/IP",
-      "AWS",
-      "PostgreSQL",
-      "Pandas",
-      "Plotly",
-      "Simulink",
-      "Arduino",
-      "PLCs",
+      "Root Cause Analysis",
+      "Fault Injection",
       "Sensor Integration",
-      "Dynamic Modeling",
-      "PID",
-      "Sensor Fusion"
+      "PID Control",
+      "Arduino",
+      "PLCs"
     ],
     "tools": [
-      "MATLAB",
+      "Git/GitHub",
       "SolidWorks",
       "Siemens NX",
-      "AutoCAD",
+      "MATLAB / Simulink",
       "ANSYS",
-      "Git/GitHub",
-      "CI/CD",
-      "Docker"
+      "Plotly",
+      "AutoCAD"
     ]
   },
   "resumes": [
+    {
+      "title": "ML Engineer Resume",
+      "tagline": "Production ML + manufacturing domain — the hybrid MLE profile.",
+      "image": "assets/img/projects/mlops_sys.gif",
+      "file": "assets/docs/resume-mlops.pdf",
+      "tags": ["MLOps", "ML Systems", "Manufacturing", "AWS", "Python"],
+      "bullets": [
+        "Bridges production ML systems (drift detection, registry-driven deployment, containerized inference) with deep manufacturing and physical systems domain knowledge.",
+        "Targets MLE roles at hardware, robotics, industrials, or any team that needs ML engineers who understand the real world their models operate in."
+      ]
+    },
     {
       "title": "Data Science Resume",
       "tagline": "DS-focused version (projects, modeling, analytics).",
@@ -313,13 +328,11 @@
       "summary": "Deep learning–based wall surface segmentation system for robotic painting automation, using a PSPNet encoder–decoder architecture with pyramid pooling. The model achieves high accuracy and IoU through careful data preprocessing, augmentation, and training strategy evaluation, enabling reliable pixel-level wall detection in industrial environments."
     },
     {
-      "title": "JobAI - AI Job Application Assistant (In Progress)",
+      "title": "JobAI – AI Job Application Assistant (In Progress)",
       "tagline": "Backend-first AI system for resume parsing and automated job application workflows.",
       "image": "assets/img/projects/jobai.gif",
       "cardLink": "",
-      "links": [
-        { "label": "GitHub (WIP)", "url": "https://github.com/your-handle/jobai" }
-      ],
+      "links": [],
       "bullets": [
         "Developing a FastAPI-based backend for structured resume and profile parsing.",
         "Designing APIs to support automated job application workflows and downstream integrations.",
