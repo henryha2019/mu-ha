@@ -93,10 +93,10 @@
   },
   "resumes": [
     {
-      "title": "ML Engineer Resume",
+      "title": "Industrial Data Resume",
       "tagline": "Production ML + manufacturing domain — the hybrid MLE profile.",
-      "image": "assets/img/projects/mlops_sys.gif",
-      "file": "assets/docs/resume-mlops.pdf",
+      "image": "assets/img/projects/ds.gif",
+      "file": "assets/docs/resume-industrial-data.pdf",
       "tags": ["MLOps", "ML Systems", "Manufacturing", "AWS", "Python"],
       "bullets": [
         "Bridges production ML systems (drift detection, registry-driven deployment, containerized inference) with deep manufacturing and physical systems domain knowledge.",
@@ -104,18 +104,7 @@
       ]
     },
     {
-      "title": "Data Science Resume",
-      "tagline": "DS-focused version (projects, modeling, analytics).",
-      "image": "assets/img/projects/ds.gif",
-      "file": "assets/docs/resume-ds.pdf",
-      "tags": ["Data Science", "ML", "Dash", "SQL"],
-      "bullets": [
-        "Highlights ML project outcomes (predictive maintenance, segmentation, forecasting).",
-        "Emphasizes modeling + evaluation and practical delivery."
-      ]
-    },
-    {
-      "title": "MLOps / Cloud Resume",
+      "title": "ML Engineer / Cloud Operations Resume",
       "tagline": "Cloud + production delivery (AWS + automation + reliability).",
       "image": "assets/img/projects/mlops.gif",
       "file": "assets/docs/resume-mlops.pdf",
@@ -126,7 +115,7 @@
       ]
     },
     {
-      "title": "Mechanical Engineering Resume",
+      "title": "Automations Engineering Resume",
       "tagline": "ME-focused version (design, manufacturing, GD&T).",
       "image": "assets/img/projects/me.gif",
       "file": "assets/docs/resume-me.pdf",
