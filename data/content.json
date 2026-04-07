@@ -93,36 +93,36 @@
   },
   "resumes": [
     {
-      "title": "Industrial Data Resume",
-      "tagline": "Production ML + manufacturing domain — the hybrid MLE profile.",
+      "title": "Industrial Data & Predictive Maintenance Resume",
+      "tagline": "Manufacturing data analyst with hands-on production floor and sensor systems experience.",
       "image": "assets/img/projects/ds.gif",
       "file": "assets/docs/resume-industrial-data.pdf",
-      "tags": ["MLOps", "ML Systems", "Manufacturing", "AWS", "Python"],
+      "tags": ["Predictive Maintenance", "Manufacturing", "SPC", "Python", "AWS"],
       "bullets": [
-        "Bridges production ML systems (drift detection, registry-driven deployment, containerized inference) with deep manufacturing and physical systems domain knowledge.",
-        "Targets MLE roles at hardware, robotics, industrials, or any team that needs ML engineers who understand the real world their models operate in."
+        "Built for Manufacturing Data Analyst, Process Engineer, and Predictive Maintenance roles — leads with SPC, yield analysis (FPY/FTY), GD&T, SAP, and root cause analysis before the ML stack.",
+        "Capstone project (Brilliant Automation) is positioned as production monitoring work: multi-rate sensor pipelines, health score generation across 12 machine metrics, and deployment-realistic validation."
       ]
     },
     {
-      "title": "ML Engineer / Cloud Operations Resume",
-      "tagline": "Cloud + production delivery (AWS + automation + reliability).",
+      "title": "ML Engineer / MLOps Resume",
+      "tagline": "Production ML systems — end-to-end ownership from training to live cloud inference.",
       "image": "assets/img/projects/mlops.gif",
       "file": "assets/docs/resume-mlops.pdf",
-      "tags": ["MLOps", "AWS", "CI/CD", "Terraform"],
+      "tags": ["MLOps", "AWS", "Docker", "FastAPI", "CI/CD"],
       "bullets": [
-        "Operational focus: Docker, Kubernetes, Linux, GitHub Actions, Terraform.",
-        "Positions projects as production-grade systems (deployment, monitoring, reproducibility)."
+        "Built for ML Engineer and MLOps roles — centers on shipping production systems: registry-driven model promotion, containerized FastAPI inference on AWS ECS, drift monitoring with PSI, and reproducible experiment workflows.",
+        "Projects (ML Guard, Stock Price MLOps Pipeline) are the core signal: real deployed systems with observability, cost attribution, Slack alerting, and operational runbooks — not just notebooks."
       ]
     },
     {
-      "title": "Automations Engineering Resume",
-      "tagline": "ME-focused version (design, manufacturing, GD&T).",
+      "title": "Automation / Systems Engineer Resume",
+      "tagline": "Hardware-grounded engineer spanning mechanical design, controls, and test automation.",
       "image": "assets/img/projects/me.gif",
       "file": "assets/docs/resume-me.pdf",
-      "tags": ["SolidWorks", "NX", "DFM/DFA", "GD&T"],
+      "tags": ["GD&T", "DFM/DFA", "Arduino", "PLCs", "Sensor Integration"],
       "bullets": [
-        "Mechanical design + manufacturing experience with full-cycle engineering.",
-        "Strong foundation bridging physical systems with data/automation."
+        "Built for Automation Engineer, Systems Engineer, and Test Engineer roles — leads with a full manufacturing and hardware stack: DFM/DFA, GD&T, tolerance analysis, SAP BOMs, SPC, Arduino, PLCs, and PID control.",
+        "Projects anchor the physical systems story: the Manufacturing Test Automation Platform (TCP/IP DUT simulator, fault injection, yield analytics) and a closed-loop Robotic Manipulator System with structured validation."
       ]
     }
   ],
